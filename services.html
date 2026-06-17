@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Mo Tech Solutions</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="nav-brand">
+        <img
+          src="https://via.placeholder.com/45x45/00C2CB/0D1B2A?text=M"
+          alt="Mo Tech Solutions logo - letter M in teal"
+          class="logo-img"
+        />
+        <span class="brand-name">Mo</span>
+      </div>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li>
+          <a href="services.html" class="nav-link active" aria-current="page"
+            >Services</a
+          >
+        </li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-content">
+      <!-- PAGE HERO -->
+      <section class="page-hero" aria-labelledby="services-hero-heading">
+        <div class="page-hero-content">
+          <p class="hero-eyebrow">Mo Tech Solutions</p>
+          <h1 id="services-hero-heading" class="page-hero-title">
+            What I Can Build <span class="title-accent">For You</span>
+          </h1>
+          <p class="page-hero-subtitle">
+            Five specialized services combining cutting-edge technology with
+            real-world domain expertise from healthcare, coaching, and culinary
+            arts.
+          </p>
+        </div>
+      </section>
+
+      <!-- SERVICES GRID -->
+      <section class="services-section" aria-labelledby="services-heading">
+        <div class="section-header">
+          <h2 id="services-heading" class="section-title">Core Services</h2>
+          <p class="section-subtitle">
+            Each service is backed by hands-on professional experience
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card" aria-labelledby="service-1-title">
+            <header class="service-card-header">
+              <div class="service-icon-wrap" aria-hidden="true">
+                <span class="service-icon">⚡</span>
+              </div>
+              <div class="service-card-meta">
+                <span class="service-tag">AI / ML</span>
+                <h2 id="service-1-title" class="service-title">
+                  AI & Document Intelligence
+                </h2>
+              </div>
+            </header>
+            <p class="service-desc">
+              Build intelligent document processing systems that understand,
+              extract, and reason over unstructured data. From PDF chatbots to
+              enterprise RAG pipelines — I design AI that makes documents work
+              for you.
+            </p>
+            <ul
+              class="service-features"
+              role="list"
+              aria-label="AI service features"
+            >
+              <li class="feature-item">
+                <span class="feature-dot" aria-hidden="true"></span>RAG pipeline
+                architecture and deployment
+              </li>
+              <li class="feature-item">
+                <span class="feature-dot" aria-hidden="true"></span>LLM
+                integration (OpenAI, Anthropic, open-source)
+              </li>
+              <li class="feature-item">
+                <span class="feature-dot" aria-hidden="true"></span>Vector
+                database setup and embedding optimization
+              </li>
+              <li class="feature-item">
+                <span class="feature-dot" aria-hidden="true"></span>Document
+                chatbot development and deployment
+              </li>
+            </ul>
+            <div class="service-card-footer">
+              <span class="service-exp-label">Real-world experience:</span>
+              <span class="service-exp-value">Pfizer Externship — Active</span>
+            </div>
+          </article>
+
+          <article class="service-card" aria-labelledby="service-2-title">
+            <header class="service-card-header">
+              <div class="service-icon-wrap" aria-hidden="true">
+                <span class="service-icon">🔐</span>
+              </div>
+              <div class="service-card-meta">
+                <span class="service-tag">Cybersecurity</span>
+                <h2 id="service-2-title" class="service-title">
+                  IoT Security Consulting
+                </h2>
+              </div>
+            </header>
+            <p class="service-desc">
+              Secure your connected devices and smart systems before attackers
+              find the gaps. I conduct threat modeling, protocol audits, and
+              design defense-in-depth architectures for IoT environments.
+            </p>
+            <ul
+              class="service-features"
+              role="list"
+              aria-label="IoT security service features"
+            >
+              <li class="feature-item">
+                <span class="feature-dot" aria-hidden="true"></span>STRIDE
+                threat modeling and risk assessment
+              </li>
+              <li class="feature-item">
+                <span class="feature-dot" aria-hidden="true"></span>MQTT
+                protocol security auditing
+              </li>
+              <li class="feature-item">
+                <span class="feature-dot" aria-hidden="true"></span>CIA Triad
+                analysis for smart building systems
+              </li>
+              <li class="feature-item">
+                <span class="feature-dot" aria-hidden="true"></span>IoT network
+                architecture and segmentation
+              </li>
+            </ul>
+            <div class="service-card-footer">
+              <span class="service-exp-label">Real-world experience:</span>
+              <span class="service-exp-value"
+                >Hydroficient Externship — Active</span
+              >
+            </div>
+          </article>
+
+          <article class="service-card" aria-labelledby="service-3-title">
+            <header class="service-card-header">
+              <div class="service-icon-wrap" aria-hidden="true">
+                <span class="service-icon">🐍</span>
+              </div>
+              <div class="service-card-meta">
+                <span class="service-tag">Development</span>
+                <h2 id="service-3-title" class="service-title">
+                  Full-Stack AI App Development
+                </h2>
+              </div>
+            </header>
+            <p class="service-desc">
+              From concept to deployed product — I build production-ready AI
+              applications with clean interfaces, robust backends, and real
+              users in mind. Shipped on HuggingFace Spaces, Docker, and cloud
+              platforms.
+            </p>
+            <ul
+              class="service-features"
+              role="list"
+              aria-label="Development service features"
+            >
+              <li class="feature-item">
+                <span class="feature-dot" aria-hidden="true"></span>Python
+                backend development and REST APIs
+              </li>
+              <li class="feature-item">
+                <span class="feature-dot" aria-hidden="true"></span>Gradio and
+                Streamlit UI development
+              </li>
+              <li class="feature-item">
+                <span class="feature-dot" aria-hidden="true"></span>HuggingFace
+                Spaces and Docker deployment
+              </li>
+              <li class="feature-item">
+                <span class="feature-dot" aria-hidden="true"></span>SQL database
+                design and integration
+              </li>
+            </ul>
+            <div class="service-card-footer">
+              <span class="service-exp-label">Live projects:</span>
+              <span class="service-exp-value"
+                >DocChat · SQL Murder Mystery</span
+              >
+            </div>
+          </article>
+
+          <article class="service-card" aria-labelledby="service-4-title">
+            <header class="service-card-header">
+              <div class="service-icon-wrap" aria-hidden="true">
+                <span class="service-icon">☁️</span>
+              </div>
+              <div class="service-card-meta">
+                <span class="service-tag">Cloud</span>
+                <h2 id="service-4-title" class="service-title">
+                  Cloud Architecture & Strategy
+                </h2>
+              </div>
+            </header>
+            <p class="service-desc">
+              Design scalable, secure cloud infrastructure on Azure and AWS.
+              Whether you're migrating, building from scratch, or tightening
+              security posture — I map the right architecture to your actual
+              needs.
+            </p>
+            <ul
+              class="service-features"
+              role="list"
+              aria-label="Cloud service features"
+            >
+              <li class="feature-item">
+                <span class="feature-dot" aria-hidden="true"></span>Microsoft
+                Azure architecture and deployment
+              </li>
+              <li class="feature-item">
+                <span class="feature-dot" aria-hidden="true"></span>AWS
+                Solutions architecture consulting
+              </li>
+              <li class="feature-item">
+                <span class="feature-dot" aria-hidden="true"></span>Cloud
+                security posture assessment
+              </li>
+              <li class="feature-item">
+                <span class="feature-dot" aria-hidden="true"></span>Cost
+                optimization and infrastructure review
+              </li>
+            </ul>
+            <div class="service-card-footer">
+              <span class="service-exp-label">Certifications in progress:</span>
+              <span class="service-exp-value">SC-900 · AZ-900 · AWS CCP</span>
+            </div>
+          </article>
+
+          <article
+            class="service-card service-card--wide"
+            aria-labelledby="service-5-title"
+          >
+            <header class="service-card-header">
+              <div class="service-icon-wrap" aria-hidden="true">
+                <span class="service-icon">🎯</span>
+              </div>
+              <div class="service-card-meta">
+                <span class="service-tag">Training</span>
+                <h2 id="service-5-title" class="service-title">
+                  Technical Training & Coaching
+                </h2>
+              </div>
+            </header>
+            <div class="service-wide-layout">
+              <p class="service-desc">
+                Most engineers can build systems. Few can explain them clearly
+                enough for non-technical teams to trust and use them. With a
+                background in coaching athletes and leading surgical teams, I
+                bridge that gap — translating complex AI and security concepts
+                into training that actually sticks.
+              </p>
+              <ul
+                class="service-features"
+                role="list"
+                aria-label="Training service features"
+              >
+                <li class="feature-item">
+                  <span class="feature-dot" aria-hidden="true"></span>AI
+                  literacy workshops for non-technical teams
+                </li>
+                <li class="feature-item">
+                  <span class="feature-dot" aria-hidden="true"></span
+                  >Cybersecurity awareness training
+                </li>
+                <li class="feature-item">
+                  <span class="feature-dot" aria-hidden="true"></span>1-on-1
+                  technical mentorship and coaching
+                </li>
+                <li class="feature-item">
+                  <span class="feature-dot" aria-hidden="true"></span>Technical
+                  documentation and knowledge base creation
+                </li>
+              </ul>
+            </div>
+            <div class="service-card-footer">
+              <span class="service-exp-label">Background:</span>
+              <span class="service-exp-value"
+                >Certified Swim Coach · Surgical Tech · CS Educator</span
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- IMAGE GALLERY -->
+      <section class="gallery-section" aria-labelledby="gallery-heading">
+        <div class="section-header">
+          <h2 id="gallery-heading" class="section-title">Project Gallery</h2>
+          <p class="section-subtitle">A look at what I've built</p>
+        </div>
+
+        <div
+          class="gallery-wrap"
+          id="project-gallery"
+          tabindex="0"
+          aria-label="Project image gallery. Use arrow keys to navigate."
+        >
+          <div
+            id="gallery-live"
+            role="status"
+            aria-live="polite"
+            class="sr-only"
+          ></div>
+
+          <div class="gallery-img-wrap">
+            <img id="gallery-img" src="" alt="" class="gallery-img" />
+            <div class="gallery-tag-wrap">
+              <span id="gallery-tag" class="tag"></span>
+            </div>
+          </div>
+
+          <div class="gallery-info">
+            <h3 id="gallery-title" class="gallery-title"></h3>
+            <p id="gallery-desc" class="gallery-desc"></p>
+          </div>
+
+          <div
+            class="gallery-controls"
+            role="group"
+            aria-label="Gallery navigation"
+          >
+            <button
+              id="gallery-prev"
+              class="gallery-btn"
+              aria-label="Previous project"
+            >
+              &#8592;
+            </button>
+            <div
+              id="gallery-dots"
+              class="gallery-dots"
+              role="group"
+              aria-label="Project indicators"
+            ></div>
+            <span
+              id="gallery-counter"
+              class="gallery-counter"
+              aria-live="polite"
+            ></span>
+            <button
+              id="gallery-next"
+              class="gallery-btn"
+              aria-label="Next project"
+            >
+              &#8594;
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ SECTION -->
+      <section class="faq-section" aria-labelledby="faq-heading">
+        <div class="section-header">
+          <h2 id="faq-heading" class="section-title">
+            Frequently Asked Questions
+          </h2>
+          <p class="section-subtitle">
+            Click any question to reveal the answer
+          </p>
+        </div>
+
+        <div class="faq-list" role="list">
+          <div class="faq-item" role="listitem">
+            <button
+              class="faq-question"
+              aria-expanded="false"
+              aria-controls="faq-answer-1"
+            >
+              <span>What services do you offer?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-1" role="region">
+              <p>
+                I offer five core services: AI & Document Intelligence, IoT
+                Cybersecurity Consulting, Full-Stack AI App Development, Cloud
+                Architecture & Strategy, and Technical Training & Coaching. Each
+                service is backed by real professional experience from my
+                externships at Pfizer and Hydroficient.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button
+              class="faq-question"
+              aria-expanded="false"
+              aria-controls="faq-answer-2"
+            >
+              <span>How do I get started working with you?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-2" role="region">
+              <p>
+                The easiest way is to fill out the contact form on the Contact
+                page. Describe your project or need, select the relevant topic,
+                and I'll get back to you within 24 hours. First conversation is
+                always free.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button
+              class="faq-question"
+              aria-expanded="false"
+              aria-controls="faq-answer-3"
+            >
+              <span
+                >What makes your background different from other
+                developers?</span
+              >
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-3" role="region">
+              <p>
+                Before writing code I spent years in surgical suites, coaching
+                swimmers, and running professional kitchens. Every role demanded
+                precision under pressure. That background gives me a perspective
+                most engineers simply don't have — I approach system design
+                methodically, communicate clearly with non-technical teams, and
+                stay calm when things go wrong.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button
+              class="faq-question"
+              aria-expanded="false"
+              aria-controls="faq-answer-4"
+            >
+              <span>Are you available for remote work?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-4" role="region">
+              <p>
+                Yes — fully open to remote work. I'm based in Elizabeth, NJ and
+                currently completing two remote externships simultaneously. I'm
+                comfortable with async communication, video calls, and
+                distributed team workflows.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button
+              class="faq-question"
+              aria-expanded="false"
+              aria-controls="faq-answer-5"
+            >
+              <span>What technologies do you work with?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-5" role="region">
+              <p>
+                Python, SQL, JavaScript, HTML, CSS, LlamaIndex, HuggingFace,
+                Gradio, Docker, MQTT, Microsoft Azure, and AWS. I'm currently
+                pursuing Azure (SC-900, AZ-900, AI-900) and AWS (Cloud
+                Practitioner, SAA-C03) certifications alongside CompTIA
+                Security+.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS SECTION -->
+      <section class="process-section" aria-labelledby="process-heading">
+        <div class="section-header">
+          <h2 id="process-heading" class="section-title">How I Work</h2>
+          <p class="section-subtitle">
+            A straightforward process from first conversation to final delivery
+          </p>
+        </div>
+        <ol class="process-list" role="list">
+          <li class="process-step">
+            <div class="process-step-number" aria-hidden="true">01</div>
+            <div class="process-step-content">
+              <h3 class="process-step-title">Discovery</h3>
+              <p class="process-step-desc">
+                We start with a conversation — not a form. I learn your goals,
+                constraints, and what success actually looks like for your team.
+              </p>
+            </div>
+          </li>
+          <li class="process-step">
+            <div class="process-step-number" aria-hidden="true">02</div>
+            <div class="process-step-content">
+              <h3 class="process-step-title">Scope & Plan</h3>
+              <p class="process-step-desc">
+                I map out a clear technical plan with milestones, deliverables,
+                and honest timelines. No surprises.
+              </p>
+            </div>
+          </li>
+          <li class="process-step">
+            <div class="process-step-number" aria-hidden="true">03</div>
+            <div class="process-step-content">
+              <h3 class="process-step-title">Build & Iterate</h3>
+              <p class="process-step-desc">
+                I build in the open — regular check-ins, working demos, and
+                course corrections before they become problems.
+              </p>
+            </div>
+          </li>
+          <li class="process-step">
+            <div class="process-step-number" aria-hidden="true">04</div>
+            <div class="process-step-content">
+              <h3 class="process-step-title">Deliver & Document</h3>
+              <p class="process-step-desc">
+                Clean handoff with documentation your team can actually use. I
+                don't disappear after deployment.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- CTA SECTION -->
+      <section class="cta-section" aria-labelledby="cta-heading">
+        <div class="cta-box">
+          <h2 id="cta-heading" class="cta-title">Ready to Start a Project?</h2>
+          <p class="cta-desc">
+            Tell me what you're building. First conversation is always free.
+          </p>
+          <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-content">
+        <p class="footer-copy">
+          &copy; 2025 Mo Tech Solutions &mdash; Built with intention.
+        </p>
+        <p class="footer-stack">
+          <em>HTML · CSS · Built for humans and screen readers alike.</em>
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

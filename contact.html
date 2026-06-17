@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Mo Tech Solutions</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="nav-brand">
+        <img
+          src="https://via.placeholder.com/45x45/00C2CB/0D1B2A?text=M"
+          alt="Mo Tech Solutions logo - letter M in teal"
+          class="logo-img"
+        />
+        <span class="brand-name">Mo</span>
+      </div>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li>
+          <a href="contact.html" class="nav-link active" aria-current="page"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <main id="main-content">
+      <section class="page-hero" aria-labelledby="contact-hero-heading">
+        <div class="page-hero-content">
+          <p class="hero-eyebrow">Mo Tech Solutions</p>
+          <h1 id="contact-hero-heading" class="page-hero-title">
+            Let's Build <span class="title-accent">Something Together</span>
+          </h1>
+          <p class="page-hero-subtitle">
+            Have a project in mind? A problem that needs solving? Or just want
+            to connect? Fill out the form below and I'll get back to you within
+            24 hours.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact-section" aria-labelledby="contact-form-heading">
+        <div class="contact-grid">
+          <aside class="contact-info" aria-label="Contact information">
+            <div class="contact-info-block">
+              <h2 id="contact-form-heading" class="contact-info-title">
+                Get In Touch
+              </h2>
+              <p class="contact-info-desc">
+                Whether you're a recruiter, potential client, or fellow
+                developer — I read every message and respond to every serious
+                inquiry.
+              </p>
+            </div>
+
+            <ul
+              class="contact-details-list"
+              role="list"
+              aria-label="Contact details"
+            >
+              <li class="contact-detail-item">
+                <div class="contact-detail-icon" aria-hidden="true">📧</div>
+                <div class="contact-detail-content">
+                  <span class="contact-detail-label">Email</span>
+                  <a
+                    href="mailto:moisemichaud@gmail.com"
+                    class="contact-detail-value"
+                  >
+                    moisemichaud@gmail.com
+                  </a>
+                </div>
+              </li>
+              <li class="contact-detail-item">
+                <div class="contact-detail-icon" aria-hidden="true">💼</div>
+                <div class="contact-detail-content">
+                  <span class="contact-detail-label">LinkedIn</span>
+                  <a
+                    href="https://www.linkedin.com/in/moisemichaud"
+                    class="contact-detail-value"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    linkedin.com/in/moisemichaud
+                  </a>
+                </div>
+              </li>
+              <li class="contact-detail-item">
+                <div class="contact-detail-icon" aria-hidden="true">🐙</div>
+                <div class="contact-detail-content">
+                  <span class="contact-detail-label">GitHub</span>
+                  <a
+                    href="https://github.com/moise97"
+                    class="contact-detail-value"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    github.com/moise97
+                  </a>
+                </div>
+              </li>
+              <li class="contact-detail-item">
+                <div class="contact-detail-icon" aria-hidden="true">📍</div>
+                <div class="contact-detail-content">
+                  <span class="contact-detail-label">Location</span>
+                  <span class="contact-detail-value"
+                    >Elizabeth, NJ — Open to Remote</span
+                  >
+                </div>
+              </li>
+            </ul>
+
+            <div
+              class="availability-card"
+              role="status"
+              aria-label="Current availability status"
+            >
+              <div class="availability-indicator" aria-hidden="true">
+                <span class="availability-dot"></span>
+              </div>
+              <div class="availability-text">
+                <span class="availability-title">Currently Available</span>
+                <span class="availability-desc"
+                  >Open to internships, freelance, and full-time roles</span
+                >
+              </div>
+            </div>
+          </aside>
+
+          <div class="contact-form-wrap">
+            <form
+              class="contact-form"
+              action="#"
+              method="POST"
+              aria-label="Contact form"
+              novalidate
+            >
+              <h2 class="form-title">Send a Message</h2>
+
+              <div class="form-group">
+                <label for="name" class="form-label">
+                  Full Name
+                  <span class="form-required" aria-label="required">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-input"
+                  placeholder="Your full name"
+                  required
+                  autocomplete="name"
+                  aria-describedby="name-hint"
+                />
+                <span id="name-hint" class="form-hint"
+                  >Enter your first and last name</span
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">
+                  Email Address
+                  <span class="form-required" aria-label="required">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="you@example.com"
+                  required
+                  autocomplete="email"
+                  aria-describedby="email-hint"
+                />
+                <span id="email-hint" class="form-hint"
+                  >I'll reply to this address within 24 hours</span
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="subject" class="form-label">
+                  What's This About?
+                  <span class="form-required" aria-label="required">*</span>
+                </label>
+                <select
+                  id="subject"
+                  name="subject"
+                  class="form-input form-select"
+                  required
+                  aria-describedby="subject-hint"
+                >
+                  <option value="" disabled selected>Select a topic</option>
+                  <option value="job-opportunity">
+                    Job Opportunity / Recruitment
+                  </option>
+                  <option value="freelance">Freelance Project</option>
+                  <option value="ai-ml">AI & Machine Learning Service</option>
+                  <option value="cybersecurity">
+                    Cybersecurity Consulting
+                  </option>
+                  <option value="collaboration">
+                    Collaboration / Partnership
+                  </option>
+                  <option value="other">Something Else</option>
+                </select>
+                <span id="subject-hint" class="form-hint"
+                  >Helps me respond with the right context</span
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">
+                  Your Message
+                  <span class="form-required" aria-label="required">*</span>
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-input form-textarea"
+                  placeholder="Tell me about your project, role, or question..."
+                  required
+                  rows="6"
+                  aria-describedby="message-hint"
+                  minlength="20"
+                ></textarea>
+                <span id="message-hint" class="form-hint"
+                  >Minimum 20 characters. The more detail, the better I can
+                  help.</span
+                >
+              </div>
+
+              <div class="form-group form-group--checkbox">
+                <label class="checkbox-label" for="consent">
+                  <input
+                    type="checkbox"
+                    id="consent"
+                    name="consent"
+                    class="checkbox-input"
+                    required
+                  />
+                  <span class="checkbox-custom" aria-hidden="true"></span>
+                  <span class="checkbox-text">
+                    I agree that Mo Tech Solutions may store and use my contact
+                    information to respond to my inquiry.
+                  </span>
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn-primary btn-submit"
+                aria-describedby="submit-hint"
+              >
+                Send Message
+                <span class="btn-arrow" aria-hidden="true">→</span>
+              </button>
+
+              <span
+                id="submit-hint"
+                class="form-hint"
+                style="text-align: center; display: block; margin-top: 0.5rem"
+              >
+                I typically respond within 24 hours on weekdays.
+              </span>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-content">
+        <p class="footer-copy">
+          &copy; 2025 Mo Tech Solutions &mdash; Built with intention.
+        </p>
+        <p class="footer-stack">
+          <em>HTML · CSS · Built for humans and screen readers alike.</em>
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
