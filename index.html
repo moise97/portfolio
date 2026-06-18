@@ -1,121 +1,28 @@
 <!doctype html>
-<!-- 
-  DOCTYPE declaration: Tells the browser this is an HTML5 document.
-  Without this, browsers may render the page in "quirks mode" (old broken behavior).
--->
-
 <html lang="en">
-  <!-- 
-  lang="en" is an ACCESSIBILITY feature.
-  Screen readers (used by visually impaired users) use this to 
-  select the correct pronunciation and reading voice.
--->
-
   <head>
-    <!-- 
-    The <head> section is NOT visible to users.
-    It contains metadata (info about the page) and links to external resources.
-  -->
-
     <meta charset="UTF-8" />
-    <!-- 
-    charset="UTF-8" tells the browser how to decode text characters.
-    UTF-8 supports virtually every language/symbol. Always include this.
-  -->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- 
-    viewport meta tag: Makes the page RESPONSIVE (looks good on phones and tablets).
-    Without this, mobile browsers zoom out and show a shrunken desktop version.
-    "width=device-width" = match the screen width
-    "initial-scale=1.0" = don't zoom in or out by default
-  -->
-
-    <title>Mo | AI & Cybersecurity Portfolio</title>
-    <!-- 
-    <title> appears in the browser tab and in Google search results.
-    It is NOT shown on the page itself.
-  -->
-
-    <!-- Google Fonts: Importing two typefaces -->
+    <title>Moise Michaud | AI & Cybersecurity Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <!-- 
-    <link> tags connect external resources to our HTML page.
-    Here we're loading two Google Fonts:
-    - Space Grotesk: Used for headings (modern, distinctive)
-    - Inter: Used for body text (clean, readable)
-    
-    "preconnect" hints let the browser start the connection early,
-    so fonts load faster (a performance optimization).
-  -->
-
     <link rel="stylesheet" href="style.css" />
-    <!-- 
-    This links our external CSS file to this HTML file.
-    ALL our visual styling (colors, layout, fonts) lives in style.css.
-    Keeping HTML and CSS in separate files is best practice — 
-    it separates CONTENT (HTML) from PRESENTATION (CSS).
-  --></head>
+  </head>
 
   <body>
-    <!-- 
-    Everything inside <body> is what the user actually sees on screen.
-    We use SEMANTIC HTML elements — tags whose names describe their purpose.
-    This helps both accessibility tools (screen readers) and search engines.
-  -->
-
-    <!-- ==================== NAVIGATION ==================== -->
     <nav class="navbar" role="navigation" aria-label="Main navigation">
-      <!-- 
-      <nav> is a SEMANTIC element — it tells browsers and screen readers 
-      "this section contains navigation links."
-      
-      role="navigation" reinforces this for older assistive technologies.
-      aria-label gives it a human-readable name for screen readers 
-      that have multiple nav sections.
-      
-      class="navbar" lets our CSS target this specific element for styling.
-    -->
-
       <div class="nav-brand">
-        <!-- 
-        <div> is a generic container — it has no semantic meaning on its own.
-        We use it here purely to group the logo + name together for layout purposes.
-        class="nav-brand" lets CSS style just this grouping.
-      -->
-
         <img
-          src="https://via.placeholder.com/45x45/00C2CB/0D1B2A?text=M"
-          alt="Mo's portfolio logo - letter M in teal"
+          src="images/profile.jpg"
+          alt="Moise Michaud profile photo"
           class="logo-img"
         />
-        <!-- 
-        <img> REQUIRED by the assignment.
-        
-        src= : The image source (URL or file path). 
-               We're using a placeholder service that generates an image 
-               showing "M" on a teal background. In a real project, 
-               you'd replace this with your actual logo file.
-        
-        alt= : ACCESSIBILITY CRITICAL. 
-               This text is read aloud by screen readers for blind users.
-               It also displays if the image fails to load.
-               Always describe what the image shows, not just say "logo."
-        
-        class= : Lets CSS style this specific image.
-      -->
-
-        <span class="brand-name">Mo</span>
-        <!-- 
-        <span> is an inline generic container (like <div> but for inline content).
-        Used here just to apply a CSS class to the name text.
-      --></div>
-
+        <span class="brand-name">Moise</span>
+      </div>
       <ul class="nav-links" role="list">
         <li>
           <a href="index.html" class="nav-link active" aria-current="page"
@@ -125,93 +32,49 @@
         <li><a href="services.html" class="nav-link">Services</a></li>
         <li><a href="projects.html" class="nav-link">Projects</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li>
+          <a
+            href="resume.pdf"
+            class="btn btn-resume"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Resume ↓</a
+          >
+        </li>
       </ul>
     </nav>
-    <!-- End of <nav> -->
 
-    <!-- ==================== MAIN CONTENT ==================== -->
     <main id="main-content">
-      <!-- 
-      <main> is a SEMANTIC element — there should only be ONE per page.
-      It wraps the primary content (not the nav, header, or footer).
-      Screen readers have a keyboard shortcut to jump directly to <main>,
-      which helps users skip repetitive navigation.
-      
-      id="main-content" is used with a "skip to content" link (accessibility best practice).
-    -->
-
-      <!-- ===== HERO SECTION ===== -->
       <section class="hero" aria-labelledby="hero-heading">
-        <!-- 
-        <section> groups thematically related content.
-        It's more meaningful than <div> — it says "this is a distinct part of the page."
-        
-        aria-labelledby="hero-heading" : Accessibility — links this section 
-        to its heading so screen readers announce "Hero section: [heading text]"
-        when navigating between sections.
-      -->
-
         <div class="hero-content">
           <p class="hero-eyebrow">
             Computer Science Student · AI/ML · Cybersecurity
           </p>
-          <!-- 
-          <p> = Paragraph. Used here for a small label above the main heading.
-          Not a heading itself because it doesn't mark a new section —
-          it's supporting text.
-        -->
-
           <h1 id="hero-heading" class="hero-title">
             From the OR to the Cloud.
             <span class="title-accent">Built Different.</span>
           </h1>
-          <!-- 
-          <h1> = Heading Level 1. THE most important heading on the page.
-          There should be ONLY ONE <h1> per page.
-          Search engines and screen readers use it as the page's primary topic.
-          
-          id="hero-heading" : Connects to the aria-labelledby on the <section>.
-          
-          <span class="title-accent"> : Wraps part of the text so CSS can 
-          color just those words differently.
-        -->
-
           <p class="hero-subtitle">
-            I'm Mo — a CS student with roots in surgical technology, swim
+            I'm Moise — a CS student with roots in surgical technology, swim
             coaching, and culinary arts. Currently building RAG systems at
-            Pfizer and IoT security solutions at Hydroficient. My edge isn't
-            just technical — it's the perspective I bring from every field I've
-            mastered.
+            Pfizer and IoT security solutions at Hydroficient. I bring a
+            "zero-error" mentality from high-stakes medical environments to
+            every line of code I write.
           </p>
-          <!-- 
-          Second <p> for the longer description. Each paragraph is its own <p> tag.
-          Multiple lines of related text belong in ONE <p>, not multiple <p> tags.
-        -->
-
           <div class="hero-cta-group">
-            <!-- 
-            <div> used as a layout container for the two buttons below.
-            Has no semantic meaning — purely for grouping/styling.
-          -->
             <a href="projects.html" class="btn btn-primary">View My Work</a>
             <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
-            <!-- 
-            Buttons styled as <a> tags because they NAVIGATE to another page.
-            A rule of thumb: 
-            - <a> = navigates somewhere (links)
-            - <button> = triggers an action (form submit, toggle, etc.)
-            
-            Both have the class "btn" for shared button styles,
-            plus a specific class for their color variant.
-          --></div>
+            <a
+              href="resume.pdf"
+              class="btn btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Download Resume ↓</a
+            >
+          </div>
         </div>
 
         <div class="hero-visual" aria-hidden="true">
-          <!-- 
-          aria-hidden="true" : Tells screen readers to SKIP this element.
-          Used here because the decorative shapes are purely visual —
-          they don't convey information a screen reader needs to announce.
-        -->
           <div class="hero-card">
             <div class="card-tag">Currently Building</div>
             <p class="card-project">DocChat — AI Document Intelligence</p>
@@ -220,181 +83,162 @@
               <span class="tag">LlamaIndex</span>
               <span class="tag">Gradio</span>
               <span class="tag">HuggingFace</span>
+              <span class="tag">Gemini API</span>
             </div>
           </div>
         </div>
       </section>
-      <!-- End hero section -->
 
-      <!-- ===== ABOUT SECTION ===== -->
       <section class="about-section" aria-labelledby="about-heading">
-        <div class="section-header">
-          <h2 id="about-heading" class="section-title">About Me</h2>
-          <!-- 
-          <h2> = Heading Level 2. Used for major section headings.
-          Heading levels create an OUTLINE of the page: h1 > h2 > h3...
-          Never skip levels (don't jump from h1 to h3).
-          This matters for accessibility AND search engine ranking.
-        -->
-          <p class="section-subtitle">
-            A non-traditional path to a cutting-edge career
-          </p>
+        <div class="about-profile">
+          <img
+            src="images/profile.jpg"
+            alt="Moise Michaud - CS Student, AI Developer, and Cybersecurity Specialist"
+            class="profile-photo"
+          />
+          <div
+            class="profile-badge"
+            aria-label="Currently available for opportunities"
+          >
+            <span class="availability-dot"></span>
+            <span>Available for Opportunities</span>
+          </div>
         </div>
 
-        <div class="about-grid">
+        <div class="about-body">
+          <div class="section-header" style="text-align: left">
+            <h2 id="about-heading" class="section-title">About Me</h2>
+            <p class="section-subtitle">
+              A non-traditional path to a cutting-edge career
+            </p>
+          </div>
+
           <div class="about-text">
             <p>
               Before I wrote a single line of Python, I spent years in
-              environments where precision wasn't optional — surgical suites,
-              swim meets, and professional kitchens. Every role demanded the
+              environments where precision wasn't optional — surgical suites at
+              Robert Wood Johnson Hospital, swim meets at British Swim School,
+              and professional kitchens in Manhattan. Every role demanded the
               same thing: <strong>attention to detail under pressure</strong>.
             </p>
-            <!-- 
-            <strong> = Bold text that carries semantic meaning.
-            It tells screen readers this text is IMPORTANT — they may 
-            announce it differently. Don't use <b> just to make text bold;
-            use <strong> when the content is genuinely emphasized.
-          -->
-
             <p>
               That background is my competitive advantage in tech. I approach
               system architecture like a surgical procedure — methodical,
-              sterile (secure), and outcome-driven. I coach junior developers
-              the same way I coached swimmers: break it down, build confidence,
-              measure results.
+              sterile (secure), and outcome-driven. I bring a disciplined
+              "zero-error" mentality to every codebase I touch.
             </p>
-
             <p>
-              I'm completing my CS degree while running two externships
-              simultaneously: AI document intelligence at Pfizer and IoT
-              cybersecurity at Hydroficient.
+              I'm completing my BS in Computer Science at Western Governors
+              University while running two externships simultaneously: AI
+              document intelligence at Pfizer and IoT cybersecurity at
+              Hydroficient. I speak French and Creole fluently — which comes in
+              handy more than you'd think in global tech teams.
             </p>
           </div>
 
           <div class="about-stats">
-            <!-- 
-            This div groups the stat cards together for CSS Grid layout.
-          -->
             <div class="stat-card">
               <span class="stat-number">2</span>
               <span class="stat-label">Active Externships</span>
             </div>
             <div class="stat-card">
-              <span class="stat-number">3+</span>
-              <span class="stat-label">Prior Career Domains</span>
+              <span class="stat-number">4+</span>
+              <span class="stat-label">AI Apps Deployed</span>
             </div>
             <div class="stat-card">
-              <span class="stat-number">5+</span>
-              <span class="stat-label">Projects Deployed</span>
+              <span class="stat-number">130+</span>
+              <span class="stat-label">Surgical Cases Supported</span>
             </div>
             <div class="stat-card">
-              <span class="stat-number">6</span>
-              <span class="stat-label">Certs in Progress</span>
+              <span class="stat-number">3</span>
+              <span class="stat-label">Languages Spoken</span>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ===== SERVICES / SKILLS SECTION ===== -->
       <section class="skills-section" aria-labelledby="skills-heading">
         <div class="section-header">
           <h2 id="skills-heading" class="section-title">What I Bring</h2>
-          <p class="section-subtitle">Services and capabilities I offer</p>
+          <p class="section-subtitle">
+            Skills backed by real professional experience
+          </p>
         </div>
 
         <ul class="skills-list" role="list">
-          <!-- 
-          <ul> REQUIRED by the assignment: "a list of services/features in an unordered list."
-          
-          Each <li> is one service/skill.
-          The bullets will be hidden via CSS and replaced with a custom design.
-        -->
-
           <li class="skill-item">
             <div class="skill-icon" aria-hidden="true">⚡</div>
             <div class="skill-content">
               <h3 class="skill-title">AI & Machine Learning</h3>
-              <!-- 
-              <h3> = Heading Level 3. Used inside sections for sub-headings.
-              Follows h2 correctly in our outline: h1 > h2 > h3.
-            -->
               <p class="skill-desc">
-                RAG pipeline development, LLM integration, document intelligence
-                systems, embedding models, and vector search. Hands-on
-                experience at Pfizer.
+                RAG pipeline development, LLM integration, PANDAS, NLP & Text
+                Processing, Prompt Engineering, and LLM-driven document
+                intelligence. Hands-on at Pfizer building production RAG
+                systems.
               </p>
             </div>
           </li>
-
           <li class="skill-item">
             <div class="skill-icon" aria-hidden="true">🔐</div>
             <div class="skill-content">
               <h3 class="skill-title">IoT Cybersecurity</h3>
               <p class="skill-desc">
-                MQTT protocol security, threat modeling (STRIDE), CIA Triad
+                MQTT protocol security, STRIDE threat modeling, CIA Triad
                 analysis, and network architecture for smart building systems.
-                Active work at Hydroficient.
+                Active externship at Hydroficient.
               </p>
             </div>
           </li>
-
           <li class="skill-item">
             <div class="skill-icon" aria-hidden="true">🐍</div>
             <div class="skill-content">
               <h3 class="skill-title">Python & Full-Stack Development</h3>
               <p class="skill-desc">
-                Python, SQL, REST APIs, Docker, Gradio, and HuggingFace Spaces
-                deployment. Building production-ready AI applications from
-                scratch.
+                Python, Java, JavaScript, SQL, Spring Boot, REST APIs, Docker,
+                FastAPI, React, D3.js, PostgreSQL, MySQL, MongoDB. CI/CD basics
+                and AWS (EC2/S3).
               </p>
             </div>
           </li>
-
           <li class="skill-item">
             <div class="skill-icon" aria-hidden="true">☁️</div>
             <div class="skill-content">
               <h3 class="skill-title">Cloud & Certifications</h3>
               <p class="skill-desc">
                 Pursuing Microsoft Azure (SC-900, AZ-900, AI-900) and AWS (Cloud
-                Practitioner, SAA-C03) certification tracks alongside CompTIA
-                Security+.
+                Practitioner, SAA-C03) alongside CompTIA Security+. Currently
+                working with AWS EC2/S3 in production.
               </p>
             </div>
           </li>
-
           <li class="skill-item">
             <div class="skill-icon" aria-hidden="true">🎯</div>
             <div class="skill-content">
               <h3 class="skill-title">Domain Expertise Transfer</h3>
               <p class="skill-desc">
-                Bringing healthcare precision, coaching methodology, and
-                culinary discipline into technical problem-solving — a
-                perspective most engineers simply don't have.
+                Healthcare precision (130+ surgical cases), coaching methodology
+                (20+ students), and culinary discipline from Manhattan kitchens
+                — a perspective most engineers simply don't have.
               </p>
             </div>
           </li>
         </ul>
       </section>
 
-      <!-- ===== LINKS / CTA SECTION ===== -->
       <section class="links-section" aria-labelledby="links-heading">
         <h2 id="links-heading" class="section-title">Explore More</h2>
         <p class="section-subtitle">
           Navigate to other sections of this portfolio
         </p>
-
         <nav class="page-links-nav" aria-label="Portfolio sections navigation">
-          <!-- 
-          A second <nav> is valid — this one is for internal portfolio navigation.
-          We give it a different aria-label so screen readers can distinguish 
-          it from the main navigation at the top of the page.
-        -->
           <ul class="page-links-list" role="list">
             <li>
-              <a href="about.html" class="page-link-card">
-                <span class="link-card-icon" aria-hidden="true">👤</span>
-                <span class="link-card-title">About</span>
-                <span class="link-card-desc">Full background & story</span>
+              <a href="services.html" class="page-link-card">
+                <span class="link-card-icon" aria-hidden="true">⚡</span>
+                <span class="link-card-title">Services</span>
+                <span class="link-card-desc"
+                  >AI, cybersecurity, and dev services</span
+                >
               </a>
             </li>
             <li>
@@ -407,12 +251,15 @@
               </a>
             </li>
             <li>
-              <a href="resume.html" class="page-link-card">
+              <a
+                href="resume.pdf"
+                class="page-link-card"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span class="link-card-icon" aria-hidden="true">📄</span>
                 <span class="link-card-title">Resume</span>
-                <span class="link-card-desc"
-                  >Full work history & credentials</span
-                >
+                <span class="link-card-desc">Download full resume PDF</span>
               </a>
             </li>
             <li>
@@ -428,33 +275,21 @@
         </nav>
       </section>
     </main>
-    <!-- End of <main> -->
 
-    <!-- ==================== FOOTER ==================== -->
     <footer class="site-footer" role="contentinfo">
-      <!-- 
-      <footer> is a SEMANTIC element for the bottom of the page.
-      role="contentinfo" reinforces this for older assistive technologies.
-      Typically contains copyright info, contact details, secondary links.
-    -->
-
       <div class="footer-content">
         <p class="footer-copy">
-          &copy; 2025 Mo &mdash; Built with intention.
-          <!-- 
-          &copy; = HTML entity for the © copyright symbol.
-          &mdash; = HTML entity for an em dash (—).
-          HTML entities let us include special characters safely.
-        --></p>
+          &copy; 2025 Moise Michaud &mdash; Built with intention.
+        </p>
         <p class="footer-stack">
-          <em>HTML · CSS · Built for humans and screen readers alike.</em>
-          <!-- 
-          <em> = Emphasis. Italicizes text with semantic meaning 
-          (screen readers may stress this text).
-          Different from <i> which is purely visual italic.
-        --></p>
+          <em
+            >HTML · CSS · JavaScript · Built for humans and screen readers
+            alike.</em
+          >
+        </p>
       </div>
     </footer>
-    <!-- End of <footer> -->
+
+    <script src="script.js"></script>
   </body>
 </html>

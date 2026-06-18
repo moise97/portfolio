@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initGallery();
   initFAQ();
   initFormValidation();
-
+  initPhotoModal();
   /*
     We call three init functions — one per feature.
     Each function checks if its elements exist on the current page
@@ -633,4 +633,118 @@ function initFormValidation() {
       block: 'center' = center it vertically in the viewport.
     */
   }
+}
+// ============================================================
+// FEATURE 4: PROFILE PHOTO MODAL
+// ============================================================
+
+function initPhotoModal() {
+  const profilePhotos = document.querySelectorAll(".logo-img, .profile-photo");
+  if (profilePhotos.length === 0) return;
+
+  // Create modal elements
+  const modal = document.createElement("div");
+  modal.classList.add("photo-modal");
+  modal.setAttribute("role", "dialog");
+  modal.setAttribute("aria-modal", "true");
+  modal.setAttribute("aria-label", "Profile photo of Moise Michaud");
+
+  const modalImg = document.createElement("img");
+  modalImg.src = "images/profile.jpg";
+  modalImg.alt = "Moise Michaud - AI Developer and Cybersecurity Specialist";
+  modalImg.classList.add("photo-modal-img");
+
+  const closeBtn = document.createElement("button");
+  closeBtn.classList.add("photo-modal-close");
+  closeBtn.setAttribute("aria-label", "Close photo");
+  closeBtn.textContent = "×";
+
+  modal.appendChild(closeBtn);
+  modal.appendChild(modalImg);
+  document.body.appendChild(modal);
+
+  // Open modal on photo click
+  profilePhotos.forEach(function (photo) {
+    photo.style.cursor = "pointer";
+    photo.addEventListener("click", function () {
+      modal.classList.add("photo-modal--open");
+      document.body.style.overflow = "hidden";
+      closeBtn.focus();
+    });
+  });
+
+  // Close on button click
+  closeBtn.addEventListener("click", function () {
+    modal.classList.remove("photo-modal--open");
+    document.body.style.overflow = "";
+  });
+
+  // Close on backdrop click
+  modal.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      modal.classList.remove("photo-modal--open");
+      document.body.style.overflow = "";
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && modal.classList.contains("photo-modal--open")) {
+      modal.classList.remove("photo-modal--open");
+      document.body.style.overflow = "";
+    }
+  });
+}
+// FEATURE 4: PROFILE PHOTO MODAL
+function initPhotoModal() {
+  const profilePhotos = document.querySelectorAll(".logo-img, .profile-photo");
+  if (profilePhotos.length === 0) return;
+
+  const modal = document.createElement("div");
+  modal.classList.add("photo-modal");
+  modal.setAttribute("role", "dialog");
+  modal.setAttribute("aria-modal", "true");
+  modal.setAttribute("aria-label", "Profile photo of Moise Michaud");
+
+  const modalImg = document.createElement("img");
+  modalImg.src = "images/profile.jpg";
+  modalImg.alt = "Moise Michaud - AI Developer and Cybersecurity Specialist";
+  modalImg.classList.add("photo-modal-img");
+
+  const closeBtn = document.createElement("button");
+  closeBtn.classList.add("photo-modal-close");
+  closeBtn.setAttribute("aria-label", "Close photo");
+  closeBtn.textContent = "×";
+
+  modal.appendChild(closeBtn);
+  modal.appendChild(modalImg);
+  document.body.appendChild(modal);
+
+  profilePhotos.forEach(function (photo) {
+    photo.style.cursor = "pointer";
+    photo.addEventListener("click", function () {
+      modal.classList.add("photo-modal--open");
+      document.body.style.overflow = "hidden";
+      closeBtn.focus();
+    });
+  });
+
+  closeBtn.addEventListener("click", function () {
+    modal.classList.remove("photo-modal--open");
+    document.body.style.overflow = "";
+  });
+
+  modal.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      modal.classList.remove("photo-modal--open");
+      document.body.style.overflow = "";
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && modal.classList.contains("photo-modal--open")) {
+      modal.classList.remove("photo-modal--open");
+      document.body.style.overflow = "";
+    }
+  });
 }

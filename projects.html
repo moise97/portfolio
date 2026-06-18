@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects | Mo Tech Solutions</title>
+    <title>Projects | Moise Michaud</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,11 +17,11 @@
     <nav class="navbar" role="navigation" aria-label="Main navigation">
       <div class="nav-brand">
         <img
-          src="https://via.placeholder.com/45x45/00C2CB/0D1B2A?text=M"
-          alt="Mo Tech Solutions logo - letter M in teal"
+          src="images/profile.jpg"
+          alt="Moise Michaud profile photo"
           class="logo-img"
         />
-        <span class="brand-name">Mo</span>
+        <span class="brand-name">Moise</span>
       </div>
       <ul class="nav-links" role="list">
         <li><a href="index.html" class="nav-link">Home</a></li>
@@ -32,13 +32,22 @@
           >
         </li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li>
+          <a
+            href="resume.pdf"
+            class="btn btn-resume"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Resume ↓</a
+          >
+        </li>
       </ul>
     </nav>
 
     <main id="main-content">
       <section class="page-hero" aria-labelledby="projects-hero-heading">
         <div class="page-hero-content">
-          <p class="hero-eyebrow">Mo Tech Solutions</p>
+          <p class="hero-eyebrow">Moise Michaud</p>
           <h1 id="projects-hero-heading" class="page-hero-title">
             Things I've <span class="title-accent">Built & Shipped</span>
           </h1>
@@ -56,7 +65,6 @@
         </div>
 
         <div class="projects-grid">
-          <!-- PROJECT 1 -->
           <article class="project-card" aria-labelledby="project-1-title">
             <div class="project-card-header">
               <div class="project-tags">
@@ -66,33 +74,30 @@
               </div>
               <span class="project-status project-status--live">Live</span>
             </div>
-
             <h3 id="project-1-title" class="project-title">DocChat</h3>
             <p class="project-desc">
               An AI-powered PDF chatbot that lets users upload documents and ask
               questions in natural language. Built with LlamaIndex, TF-IDF
               embeddings, and deployed on HuggingFace Spaces.
             </p>
-
             <ul
               class="project-highlights"
               role="list"
               aria-label="DocChat project highlights"
             >
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>
-                RAG pipeline with source citations and confidence scores
+                <span class="feature-dot" aria-hidden="true"></span>RAG pipeline
+                with source citations and confidence scores
               </li>
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>
-                OCR fallback for scanned PDFs using pytesseract
+                <span class="feature-dot" aria-hidden="true"></span>OCR fallback
+                for scanned PDFs using pytesseract
               </li>
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>
-                Two-panel Gradio UI deployed to HuggingFace Spaces
+                <span class="feature-dot" aria-hidden="true"></span>Two-panel
+                Gradio UI deployed to HuggingFace Spaces
               </li>
             </ul>
-
             <div class="project-card-footer">
               <a
                 href="https://huggingface.co/spaces/moise97/DocChat"
@@ -100,22 +105,19 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="View DocChat live on HuggingFace Spaces"
+                >View Live</a
               >
-                View Live
-              </a>
               <a
                 href="https://github.com/moise97"
                 class="btn btn-secondary project-btn"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="View DocChat source code on GitHub"
+                >GitHub</a
               >
-                GitHub
-              </a>
             </div>
           </article>
 
-          <!-- PROJECT 2 -->
           <article class="project-card" aria-labelledby="project-2-title">
             <div class="project-card-header">
               <div class="project-tags">
@@ -125,7 +127,6 @@
               </div>
               <span class="project-status project-status--live">Live</span>
             </div>
-
             <h3 id="project-2-title" class="project-title">
               SQL Murder Mystery
             </h3>
@@ -135,49 +136,44 @@
               aesthetic, and an Oracle hint system. Deployed on HuggingFace
               Spaces.
             </p>
-
             <ul
               class="project-highlights"
               role="list"
               aria-label="SQL Murder Mystery project highlights"
             >
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>
-                Real SQLite database with randomized killer each session
+                <span class="feature-dot" aria-hidden="true"></span>Real SQLite
+                database with randomized killer each session
               </li>
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>
-                GBA pixel art visual style and retro UI
+                <span class="feature-dot" aria-hidden="true"></span>GBA pixel
+                art visual style and retro UI
               </li>
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>
-                Progressive Oracle hint system for learning SQL
+                <span class="feature-dot" aria-hidden="true"></span>Progressive
+                Oracle hint system for learning SQL
               </li>
             </ul>
-
             <div class="project-card-footer">
               <a
-                href="https://huggingface.co/spaces/moise97"
+                href="https://huggingface.co/spaces/moise97/sql-murder-mystery"
                 class="btn btn-primary project-btn"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="View SQL Murder Mystery live on HuggingFace Spaces"
+                aria-label="View SQL Murder Mystery live"
+                >View Live</a
               >
-                View Live
-              </a>
               <a
                 href="https://github.com/moise97"
                 class="btn btn-secondary project-btn"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="View SQL Murder Mystery source code on GitHub"
+                aria-label="View SQL Murder Mystery on GitHub"
+                >GitHub</a
               >
-                GitHub
-              </a>
             </div>
           </article>
 
-          <!-- PROJECT 3 -->
           <article class="project-card" aria-labelledby="project-3-title">
             <div class="project-card-header">
               <div class="project-tags">
@@ -189,7 +185,6 @@
                 >In Progress</span
               >
             </div>
-
             <h3 id="project-3-title" class="project-title">
               Hydroficient IoT Defense
             </h3>
@@ -199,26 +194,24 @@
               Triad analysis, MQTT topic hierarchy design, and attacker
               narrative documentation.
             </p>
-
             <ul
               class="project-highlights"
               role="list"
               aria-label="Hydroficient project highlights"
             >
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>
-                STRIDE threat model for HYDROLOGIC water system
+                <span class="feature-dot" aria-hidden="true"></span>STRIDE
+                threat model for HYDROLOGIC water system
               </li>
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>
-                Secure MQTT topic hierarchy for hotel IoT network
+                <span class="feature-dot" aria-hidden="true"></span>Secure MQTT
+                topic hierarchy for hotel IoT network
               </li>
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>
-                Full professional threat model document
+                <span class="feature-dot" aria-hidden="true"></span>Full
+                professional threat model document
               </li>
             </ul>
-
             <div class="project-card-footer">
               <a
                 href="https://github.com/moise97/Hydroficient-IOT-Cyber-Defense"
@@ -226,13 +219,11 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="View Hydroficient IoT Defense on GitHub"
+                >GitHub</a
               >
-                GitHub
-              </a>
             </div>
           </article>
 
-          <!-- PROJECT 4 -->
           <article class="project-card" aria-labelledby="project-4-title">
             <div class="project-card-header">
               <div class="project-tags">
@@ -244,7 +235,6 @@
                 >In Progress</span
               >
             </div>
-
             <h3 id="project-4-title" class="project-title">DocChat Pro</h3>
             <p class="project-desc">
               An upgraded RAG pipeline combining pdfplumber, pytesseract OCR,
@@ -252,36 +242,33 @@
               exponential backoff for rate limiting and advanced retrieval
               configuration.
             </p>
-
             <ul
               class="project-highlights"
               role="list"
               aria-label="DocChat Pro project highlights"
             >
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>
-                BGE embeddings vs MiniLM vs E5 comparison testing
+                <span class="feature-dot" aria-hidden="true"></span>BGE
+                embeddings vs MiniLM vs E5 comparison testing
               </li>
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>
-                Gemini API integration with rate limit handling
+                <span class="feature-dot" aria-hidden="true"></span>Gemini API
+                integration with rate limit handling
               </li>
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>
-                Advanced retrieval configuration and chunking strategies
+                <span class="feature-dot" aria-hidden="true"></span>Advanced
+                retrieval configuration and chunking strategies
               </li>
             </ul>
-
             <div class="project-card-footer">
               <a
                 href="https://github.com/moise97"
                 class="btn btn-secondary project-btn"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="View DocChat Pro source code on GitHub"
+                aria-label="View DocChat Pro on GitHub"
+                >GitHub</a
               >
-                GitHub
-              </a>
             </div>
           </article>
         </div>
@@ -304,12 +291,17 @@
     <footer class="site-footer" role="contentinfo">
       <div class="footer-content">
         <p class="footer-copy">
-          &copy; 2025 Mo Tech Solutions &mdash; Built with intention.
+          &copy; 2025 Moise Michaud &mdash; Built with intention.
         </p>
         <p class="footer-stack">
-          <em>HTML · CSS · Built for humans and screen readers alike.</em>
+          <em
+            >HTML · CSS · JavaScript · Built for humans and screen readers
+            alike.</em
+          >
         </p>
       </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
