@@ -2287,11 +2287,9 @@ strong {
     text-align: center;
   }
 }
-
 /* ============================================================
    ADDITIONS — Append to bottom of style.css
-   v2: fixes hero spacing, CTA buttons, adds GitHub strip,
-       mobile hamburger nav
+   v3: full responsive nav for all phones + tablets
    ============================================================ */
 
 /* ---- TERMINAL CARD ---- */
@@ -2397,23 +2395,17 @@ strong {
   color: var(--color-amber);
 }
 
-/* ---- FIX: HERO SPACING & CTA BUTTONS ---- */
+/* ---- FIX: HERO SPACING ---- */
 .hero {
   min-height: auto;
   padding-bottom: var(--space-xl);
 }
 
-/* Keep all 3 CTA buttons on one row */
 .hero-cta-group {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: var(--space-sm);
   align-items: center;
-}
-
-.hero-cta-group .btn {
-  white-space: nowrap;
-  flex-shrink: 0;
 }
 
 /* ---- FILTER BAR ---- */
@@ -2444,7 +2436,6 @@ strong {
   border-color: var(--color-accent);
   color: var(--color-accent);
 }
-
 .filter-btn--active {
   background-color: var(--color-accent);
   border-color: var(--color-accent);
@@ -2488,7 +2479,6 @@ strong {
   color: var(--color-text);
   margin-bottom: 6px;
 }
-
 .github-strip-text p {
   font-size: 0.9rem;
   color: var(--color-text-muted);
@@ -2501,18 +2491,25 @@ strong {
   border: 1px solid var(--color-border);
 }
 
-/* ---- MOBILE NAV ---- */
+/* ============================================================
+   MOBILE NAV — works on ALL phones and tablets
+   Strategy: hamburger always shown below 1024px (covers tablets),
+   hidden above 1024px where full nav fits comfortably.
+   ============================================================ */
+
+/* Hamburger hidden by default (desktop) */
 .nav-hamburger {
   display: none;
   background: none;
   border: 1px solid var(--color-border);
   color: var(--color-text);
   border-radius: var(--radius-sm);
-  padding: 6px 10px;
-  font-size: 1.2rem;
+  padding: 6px 12px;
+  font-size: 1.3rem;
   cursor: pointer;
   transition: all var(--transition);
   line-height: 1;
+  flex-shrink: 0;
 }
 
 .nav-hamburger:hover {
@@ -2520,67 +2517,78 @@ strong {
   color: var(--color-accent);
 }
 
-/* ---- RESPONSIVE ---- */
-@media (max-width: 900px) {
-  .github-strip-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .github-stats-img {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 700px) {
-  /* Show hamburger, hide nav links by default */
+/* ---- Tablet + mobile breakpoint (≤1024px) ---- */
+@media (max-width: 1024px) {
   .nav-hamburger {
     display: block;
   }
 
+  /* Hide nav links by default on tablet/mobile */
   .nav-links {
     display: none;
-    position: absolute;
-    top: 64px;
+    position: fixed; /* fixed so it overlays content */
+    top: 64px; /* height of navbar */
     left: 0;
     right: 0;
+    bottom: 0;
     background-color: rgba(13, 27, 42, 0.98);
-    border-bottom: 1px solid var(--color-border);
+    border-top: 1px solid var(--color-border);
     flex-direction: column;
-    padding: var(--space-md) var(--space-lg);
-    gap: var(--space-xs);
-    z-index: 99;
-    backdrop-filter: blur(12px);
+    align-items: flex-start;
+    padding: 1.5rem 2rem;
+    gap: 0;
+    z-index: 999;
+    overflow-y: auto;
+    backdrop-filter: blur(16px);
   }
 
+  /* Show when open */
   .nav-links.nav-open {
     display: flex;
   }
 
+  /* Each nav item full width */
   .nav-links li {
     width: 100%;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
+    padding-top: 1rem;
   }
 
   .nav-links .nav-link {
     display: block;
-    padding: 10px 0;
-    font-size: 1rem;
-    border-bottom: 1px solid var(--color-border);
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    transition: color var(--transition);
+  }
+
+  .nav-links .nav-link:hover,
+  .nav-links .nav-link.active {
+    color: var(--color-accent);
   }
 
   .nav-links .btn-resume {
-    margin-top: var(--space-xs);
-    display: inline-block;
+    display: inline-flex;
+    margin-top: 0.5rem;
   }
+}
 
-  /* Stack CTA buttons on very small screens */
-  .hero-cta-group {
-    flex-wrap: wrap;
+/* ---- Responsive: smaller phones ---- */
+@media (max-width: 600px) {
+  .navbar {
+    padding: var(--space-sm);
   }
 
   .hero-cta-group .btn {
     flex: 1 1 auto;
     justify-content: center;
     text-align: center;
+    min-width: 140px;
   }
 
   .filter-bar {
@@ -2591,6 +2599,32 @@ strong {
     padding: 0.4rem 0.9rem;
   }
   .terminal-card {
+    max-width: 100%;
+  }
+
+  .github-strip {
+    padding: var(--space-lg) var(--space-sm);
+  }
+  .github-strip-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-lg);
+  }
+  .github-stats-img {
+    max-width: 100%;
+  }
+}
+
+/* ---- Responsive: tablets specifically ---- */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .navbar {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .github-strip-inner {
+    flex-direction: column;
+  }
+  .github-stats-img {
     max-width: 100%;
   }
 }
