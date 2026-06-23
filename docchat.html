@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DocChat — Case Study | Moise Michaud</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="nav-brand">
+        <img src="images/profile.jpg" alt="Moise Michaud profile photo" class="logo-img" />
+        <span class="brand-name">Moise</span>
+      </div>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="projects.html" class="nav-link active">Projects</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="resume.pdf" class="btn btn-resume" target="_blank" rel="noopener noreferrer">Resume ↓</a></li>
+      </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </nav>
+
+    <main id="main-content">
+
+      <!-- CASE STUDY HERO -->
+      <section class="case-hero">
+        <div class="case-hero-inner">
+          <a href="projects.html" class="case-back">← Back to Projects</a>
+          <div class="case-meta-row">
+            <span class="case-tag">AI / RAG</span>
+            <span class="case-tag">Pfizer Externship</span>
+            <span class="case-tag case-tag--live">● Live</span>
+          </div>
+          <h1 class="case-title">DocChat</h1>
+          <p class="case-subtitle">
+            How I built a production RAG pipeline that lets users interrogate PDF documents in natural language — deployed live on HuggingFace Spaces during my AI externship at Pfizer.
+          </p>
+          <div class="case-hero-stats">
+            <div class="case-stat">
+              <span class="case-stat-num">RAG</span>
+              <span class="case-stat-label">Architecture</span>
+            </div>
+            <div class="case-stat">
+              <span class="case-stat-num">3</span>
+              <span class="case-stat-label">Embedding Models Tested</span>
+            </div>
+            <div class="case-stat">
+              <span class="case-stat-num">Live</span>
+              <span class="case-stat-label">HuggingFace Spaces</span>
+            </div>
+            <div class="case-stat">
+              <span class="case-stat-num">OCR</span>
+              <span class="case-stat-label">Scanned PDF Support</span>
+            </div>
+          </div>
+          <div class="case-hero-actions">
+            <a href="https://huggingface.co/spaces/moise97/DocChat" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Live ↗</a>
+            <a href="https://github.com/moise97" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">GitHub</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- TECH STACK BAR -->
+      <div class="case-stack-bar">
+        <span class="case-stack-label">Stack</span>
+        <div class="case-stack-tags">
+          <span class="tag">Python</span>
+          <span class="tag">LlamaIndex</span>
+          <span class="tag">TF-IDF</span>
+          <span class="tag">BGE Embeddings</span>
+          <span class="tag">Gemini API</span>
+          <span class="tag">Gradio</span>
+          <span class="tag">pytesseract</span>
+          <span class="tag">pdfplumber</span>
+          <span class="tag">HuggingFace Spaces</span>
+        </div>
+      </div>
+
+      <!-- CASE STUDY BODY -->
+      <div class="case-body">
+
+        <!-- SECTION 1: THE PROBLEM -->
+        <section class="case-section">
+          <div class="case-section-eyebrow">01 — The Problem</div>
+          <h2 class="case-section-title">Document processing at Pfizer was still manual</h2>
+          <div class="case-section-content">
+            <p>During my AI externship at Pfizer, I was exposed to a recurring pain point across enterprise environments: critical information locked inside PDFs. Supply chain documents, clinical reports, compliance records — all sitting in static files that required someone to manually read through them to extract answers.</p>
+            <p>The question I was handed: <strong>can we build a system that lets a non-technical user ask questions about a document and get accurate, sourced answers in seconds?</strong></p>
+            <p>The constraints were real. The solution had to handle both digital PDFs and scanned documents. It had to cite its sources so users could verify answers. And it had to be deployable — not just a notebook proof of concept.</p>
+          </div>
+        </section>
+
+        <div class="case-divider"></div>
+
+        <!-- SECTION 2: THE APPROACH -->
+        <section class="case-section">
+          <div class="case-section-eyebrow">02 — The Approach</div>
+          <h2 class="case-section-title">Why RAG — and why not fine-tuning</h2>
+          <div class="case-section-content">
+            <p>The first architectural decision was the most important: RAG (Retrieval-Augmented Generation) versus fine-tuning a model on the documents.</p>
+            <p>Fine-tuning was ruled out quickly. It requires large amounts of labeled data, is expensive to retrain when documents update, and doesn't give you source citations out of the box. For a document intelligence use case where accuracy and traceability matter, RAG was the right call.</p>
+            <p>RAG works in two phases: <strong>retrieval</strong> (find the relevant chunks of the document) and <strong>generation</strong> (use an LLM to synthesize a natural language answer from those chunks). The key variable is the embedding model — how you convert text into vectors that can be compared for semantic similarity.</p>
+
+            <div class="case-callout">
+              <div class="case-callout-icon">🔬</div>
+              <div>
+                <strong>Embedding model comparison</strong>
+                <p>I tested three embedding models against the same document set: MiniLM (fast, lightweight), E5 (strong multilingual performance), and BGE (best retrieval accuracy on technical documents). BGE won on precision — it consistently returned the most relevant chunks for domain-specific queries.</p>
+              </div>
+            </div>
+
+            <p>For the retrieval layer I used <strong>LlamaIndex</strong> to manage document ingestion, chunking, and vector indexing. For the generation layer, <strong>Gemini API</strong> handled response synthesis. The initial version used TF-IDF (term frequency-inverse document frequency) for a fast, dependency-light baseline before moving to dense embeddings.</p>
+          </div>
+        </section>
+
+        <div class="case-divider"></div>
+
+        <!-- SECTION 3: WHAT BROKE -->
+        <section class="case-section">
+          <div class="case-section-eyebrow">03 — What Broke</div>
+          <h2 class="case-section-title">Three problems I didn't anticipate</h2>
+          <div class="case-section-content">
+
+            <div class="case-problem-list">
+              <div class="case-problem">
+                <div class="case-problem-num">1</div>
+                <div class="case-problem-body">
+                  <h3>Dependency conflict between transformers and Gradio</h3>
+                  <p>When I tried to add dense embedding support, the <code>transformers</code> library version required by the embedding models conflicted with the Gradio version required for the UI. The app would import fine but crash on launch with a silent error. Took several hours of isolation testing to identify — the fix was pinning specific versions in <code>requirements.txt</code> and restructuring the import order.</p>
+                </div>
+              </div>
+              <div class="case-problem">
+                <div class="case-problem-num">2</div>
+                <div class="case-problem-body">
+                  <h3>Scanned PDFs returned empty text</h3>
+                  <p><code>pdfplumber</code> extracts text from digital PDFs perfectly. But scanned PDFs — images of pages — have no extractable text layer. The first version of DocChat silently returned nothing for these files, which was worse than an error. The fix was an OCR fallback: detect when extraction returns empty, then pipe the page images through <code>pytesseract</code> to extract text before indexing.</p>
+                </div>
+              </div>
+              <div class="case-problem">
+                <div class="case-problem-num">3</div>
+                <div class="case-problem-body">
+                  <h3>Gemini API rate limiting under load</h3>
+                  <p>During testing with multiple document queries in quick succession, the Gemini API started returning 429 errors. The naive fix (retry immediately) made it worse. The real fix was exponential backoff — wait 1s, then 2s, then 4s between retries — combined with request queuing so the UI never hung silently.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="case-divider"></div>
+
+        <!-- SECTION 4: WHAT I DECIDED -->
+        <section class="case-section">
+          <div class="case-section-eyebrow">04 — What I Decided</div>
+          <h2 class="case-section-title">Architecture decisions that made it production-ready</h2>
+          <div class="case-section-content">
+            <p>After working through the problems above, the final architecture looked like this:</p>
+
+            <div class="case-arch">
+              <div class="case-arch-step">
+                <div class="case-arch-num">1</div>
+                <div class="case-arch-label">Upload</div>
+                <div class="case-arch-desc">User uploads PDF via Gradio two-panel UI</div>
+              </div>
+              <div class="case-arch-arrow">→</div>
+              <div class="case-arch-step">
+                <div class="case-arch-num">2</div>
+                <div class="case-arch-label">Extract</div>
+                <div class="case-arch-desc">pdfplumber extracts text; pytesseract OCR fallback for scanned pages</div>
+              </div>
+              <div class="case-arch-arrow">→</div>
+              <div class="case-arch-step">
+                <div class="case-arch-num">3</div>
+                <div class="case-arch-label">Index</div>
+                <div class="case-arch-desc">LlamaIndex chunks and indexes with BGE embeddings</div>
+              </div>
+              <div class="case-arch-arrow">→</div>
+              <div class="case-arch-step">
+                <div class="case-arch-num">4</div>
+                <div class="case-arch-label">Retrieve</div>
+                <div class="case-arch-desc">Top-k semantic search returns relevant chunks</div>
+              </div>
+              <div class="case-arch-arrow">→</div>
+              <div class="case-arch-step">
+                <div class="case-arch-num">5</div>
+                <div class="case-arch-label">Generate</div>
+                <div class="case-arch-desc">Gemini API synthesizes answer with source citations</div>
+              </div>
+            </div>
+
+            <p>The two-panel Gradio UI keeps document context on the left, conversation on the right. Every answer includes the source chunk and page number so users can verify. This was a deliberate design decision — in a regulated environment like pharma, answer traceability isn't optional.</p>
+
+            <div class="case-callout">
+              <div class="case-callout-icon">💡</div>
+              <div>
+                <strong>The surgical parallel</strong>
+                <p>In an operating room, every instrument is accounted for before and after a procedure. You don't assume — you verify. I applied the same logic to RAG: every answer the system gives must be traceable back to a source. If it can't cite it, it shouldn't say it.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="case-divider"></div>
+
+        <!-- SECTION 5: OUTCOME -->
+        <section class="case-section">
+          <div class="case-section-eyebrow">05 — Outcome</div>
+          <h2 class="case-section-title">Deployed, live, and still running</h2>
+          <div class="case-section-content">
+            <p>DocChat is deployed live on HuggingFace Spaces and handles both digital and scanned PDFs. Users can upload any document and ask questions in natural language — the system returns answers with source citations in seconds.</p>
+            <p>The project demonstrated that a production RAG pipeline doesn't require a massive engineering team or enterprise infrastructure. A well-architected Python stack — LlamaIndex, Gemini, Gradio, pytesseract — deployed on HuggingFace is enough to solve a real problem for real users.</p>
+
+            <div class="case-outcomes">
+              <div class="case-outcome-card">
+                <span class="case-outcome-icon">✓</span>
+                <span>Handles digital + scanned PDFs via OCR fallback</span>
+              </div>
+              <div class="case-outcome-card">
+                <span class="case-outcome-icon">✓</span>
+                <span>Source citations on every answer for traceability</span>
+              </div>
+              <div class="case-outcome-card">
+                <span class="case-outcome-icon">✓</span>
+                <span>Rate limit handling with exponential backoff</span>
+              </div>
+              <div class="case-outcome-card">
+                <span class="case-outcome-icon">✓</span>
+                <span>BGE embeddings outperform MiniLM and E5 on technical docs</span>
+              </div>
+              <div class="case-outcome-card">
+                <span class="case-outcome-icon">✓</span>
+                <span>Deployed live — not a notebook, a real product</span>
+              </div>
+            </div>
+
+            <p style="margin-top: 2rem;">DocChat Pro (in progress) extends this with advanced chunking strategies, multi-document support, and a more refined retrieval configuration. The foundation is solid — the next version builds on what this one proved.</p>
+          </div>
+        </section>
+
+        <div class="case-divider"></div>
+
+        <!-- WHAT I LEARNED -->
+        <section class="case-section">
+          <div class="case-section-eyebrow">06 — What I Learned</div>
+          <h2 class="case-section-title">The unglamorous truth about shipping AI</h2>
+          <div class="case-section-content">
+            <p>The hardest parts of building DocChat had nothing to do with AI. They were dependency management, silent failure modes, and rate limiting. The model was the easy part. The engineering around the model was where the real work happened.</p>
+            <p>That's the gap between a demo and a product. Anyone can get a RAG pipeline returning answers in a Colab notebook. Making it handle edge cases gracefully, fail loudly instead of silently, and stay up under real usage — that's engineering.</p>
+            <p>I came away with a much clearer mental model of what "production-ready" actually means: not just working, but <strong>failing predictably, recovering automatically, and communicating clearly when it can't.</strong></p>
+          </div>
+        </section>
+
+      </div><!-- end case-body -->
+
+      <!-- NEXT PROJECT CTA -->
+      <section class="case-next">
+        <div class="case-next-inner">
+          <p class="case-next-label">Next Project</p>
+          <h2 class="case-next-title">IoT Anomaly Detection Dashboard</h2>
+          <p class="case-next-desc">Real-time anomaly detection for MQTT sensor streams using Isolation Forest — built during my Hydroficient cybersecurity externship.</p>
+          <a href="projects.html" class="btn btn-primary">View All Projects</a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-content">
+        <p class="footer-copy">&copy; 2025 Moise Michaud &mdash; Built with intention.</p>
+        <p class="footer-stack"><em>HTML · CSS · JavaScript · Built for humans and screen readers alike.</em></p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

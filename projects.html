@@ -28,29 +28,14 @@
         <li><a href="about.html" class="nav-link">About</a></li>
         <li><a href="services.html" class="nav-link">Services</a></li>
         <li>
-          <a href="projects.html" class="nav-link active" aria-current="page"
-            >Projects</a
-          >
+          <a href="projects.html" class="nav-link active" aria-current="page">Projects</a>
         </li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
         <li>
-          <a
-            href="resume.pdf"
-            class="btn btn-resume"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Resume ↓</a
-          >
+          <a href="resume.pdf" class="btn btn-resume" target="_blank" rel="noopener noreferrer">Resume ↓</a>
         </li>
       </ul>
-      <button
-        class="nav-hamburger"
-        id="nav-hamburger"
-        aria-label="Toggle navigation"
-        aria-expanded="false"
-      >
-        ☰
-      </button>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
     </nav>
 
     <main id="main-content">
@@ -74,32 +59,19 @@
         </div>
 
         <!-- FILTER BAR -->
-        <div
-          class="filter-bar"
-          role="group"
-          aria-label="Filter projects by category"
-        >
-          <button class="filter-btn filter-btn--active" data-filter="all">
-            All
-          </button>
+        <div class="filter-bar" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn filter-btn--active" data-filter="all">All</button>
           <button class="filter-btn" data-filter="ai">AI / ML</button>
-          <button class="filter-btn" data-filter="cybersecurity">
-            Cybersecurity
-          </button>
+          <button class="filter-btn" data-filter="cybersecurity">Cybersecurity</button>
           <button class="filter-btn" data-filter="data">Data Analytics</button>
-          <button class="filter-btn" data-filter="software">
-            Software Eng
-          </button>
+          <button class="filter-btn" data-filter="software">Software Eng</button>
           <button class="filter-btn" data-filter="game">Games</button>
         </div>
 
         <div class="projects-grid" id="projects-grid">
+
           <!-- 1. DocChat -->
-          <article
-            class="project-card"
-            data-categories="ai"
-            aria-labelledby="project-1-title"
-          >
+          <article class="project-card" data-categories="ai" aria-labelledby="project-1-title">
             <div class="project-card-header">
               <div class="project-tags">
                 <span class="tag">RAG</span>
@@ -114,50 +86,26 @@
               questions in natural language. Built with LlamaIndex, TF-IDF
               embeddings, and deployed on HuggingFace Spaces.
             </p>
-            <ul
-              class="project-highlights"
-              role="list"
-              aria-label="DocChat project highlights"
-            >
+            <ul class="project-highlights" role="list" aria-label="DocChat project highlights">
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>RAG pipeline
-                with source citations and confidence scores
+                <span class="feature-dot" aria-hidden="true"></span>RAG pipeline with source citations and confidence scores
               </li>
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>OCR fallback
-                for scanned PDFs using pytesseract
+                <span class="feature-dot" aria-hidden="true"></span>OCR fallback for scanned PDFs using pytesseract
               </li>
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>Two-panel
-                Gradio UI deployed to HuggingFace Spaces
+                <span class="feature-dot" aria-hidden="true"></span>Two-panel Gradio UI deployed to HuggingFace Spaces
               </li>
             </ul>
             <div class="project-card-footer">
-              <a
-                href="https://huggingface.co/spaces/moise97/DocChat"
-                class="btn btn-primary project-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View DocChat live on HuggingFace Spaces"
-                >View Live</a
-              >
-              <a
-                href="https://github.com/moise97"
-                class="btn btn-secondary project-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View DocChat source code on GitHub"
-                >GitHub</a
-              >
+              <a href="https://huggingface.co/spaces/moise97/DocChat" class="btn btn-primary project-btn" target="_blank" rel="noopener noreferrer" aria-label="View DocChat live on HuggingFace Spaces">View Live</a>
+              <a href="https://github.com/moise97" class="btn btn-secondary project-btn" target="_blank" rel="noopener noreferrer" aria-label="View DocChat source code on GitHub">GitHub</a>
+              <a href="docchat.html" class="btn btn-secondary project-btn" aria-label="Read DocChat case study">Case Study →</a>
             </div>
           </article>
 
           <!-- 2. Sales Analytics Dashboard -->
-          <article
-            class="project-card project-card--featured"
-            data-categories="data"
-            aria-labelledby="project-sales-title"
-          >
+          <article class="project-card project-card--featured" data-categories="data" aria-labelledby="project-sales-title">
             <div class="project-card-header">
               <div class="project-tags">
                 <span class="tag">Streamlit</span>
@@ -166,58 +114,31 @@
               </div>
               <span class="project-status project-status--live">Live</span>
             </div>
-            <h3 id="project-sales-title" class="project-title">
-              Sales Analytics Dashboard
-            </h3>
+            <h3 id="project-sales-title" class="project-title">Sales Analytics Dashboard</h3>
             <p class="project-desc">
               An interactive sales analytics dashboard built with Streamlit and
               Plotly. Visualizes KPIs, revenue trends, and product performance
               with real-time filtering. Deployed live on HuggingFace Spaces.
             </p>
-            <ul
-              class="project-highlights"
-              role="list"
-              aria-label="Sales Analytics highlights"
-            >
+            <ul class="project-highlights" role="list" aria-label="Sales Analytics highlights">
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>Interactive
-                KPI cards with revenue, orders, and growth metrics
+                <span class="feature-dot" aria-hidden="true"></span>Interactive KPI cards with revenue, orders, and growth metrics
               </li>
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>Plotly
-                charts with date range and category filters
+                <span class="feature-dot" aria-hidden="true"></span>Plotly charts with date range and category filters
               </li>
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>Deployed on
-                HuggingFace Spaces with Docker
+                <span class="feature-dot" aria-hidden="true"></span>Deployed on HuggingFace Spaces with Docker
               </li>
             </ul>
             <div class="project-card-footer">
-              <a
-                href="https://huggingface.co/spaces/moise97/sales-analytics-dashboard"
-                class="btn btn-primary project-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View Sales Analytics Dashboard live"
-                >View Live</a
-              >
-              <a
-                href="https://github.com/moise97"
-                class="btn btn-secondary project-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View Sales Analytics Dashboard on GitHub"
-                >GitHub</a
-              >
+              <a href="https://huggingface.co/spaces/moise97/sales-analytics-dashboard" class="btn btn-primary project-btn" target="_blank" rel="noopener noreferrer" aria-label="View Sales Analytics Dashboard live">View Live</a>
+              <a href="https://github.com/moise97" class="btn btn-secondary project-btn" target="_blank" rel="noopener noreferrer" aria-label="View Sales Analytics Dashboard on GitHub">GitHub</a>
             </div>
           </article>
 
           <!-- 3. SQL Murder Mystery -->
-          <article
-            class="project-card"
-            data-categories="software game"
-            aria-labelledby="project-2-title"
-          >
+          <article class="project-card" data-categories="software game" aria-labelledby="project-2-title">
             <div class="project-card-header">
               <div class="project-tags">
                 <span class="tag">SQL</span>
@@ -226,59 +147,31 @@
               </div>
               <span class="project-status project-status--live">Live</span>
             </div>
-            <h3 id="project-2-title" class="project-title">
-              SQL Murder Mystery
-            </h3>
+            <h3 id="project-2-title" class="project-title">SQL Murder Mystery</h3>
             <p class="project-desc">
               A GBA-style detective game where players solve a murder using real
               SQL queries. Features dynamic killer randomization, pixel art
-              aesthetic, and an Oracle hint system. Deployed on HuggingFace
-              Spaces.
+              aesthetic, and an Oracle hint system. Deployed on HuggingFace Spaces.
             </p>
-            <ul
-              class="project-highlights"
-              role="list"
-              aria-label="SQL Murder Mystery project highlights"
-            >
+            <ul class="project-highlights" role="list" aria-label="SQL Murder Mystery project highlights">
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>Real SQLite
-                database with randomized killer each session
+                <span class="feature-dot" aria-hidden="true"></span>Real SQLite database with randomized killer each session
               </li>
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>GBA pixel
-                art visual style and retro UI
+                <span class="feature-dot" aria-hidden="true"></span>GBA pixel art visual style and retro UI
               </li>
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>Progressive
-                Oracle hint system for learning SQL
+                <span class="feature-dot" aria-hidden="true"></span>Progressive Oracle hint system for learning SQL
               </li>
             </ul>
             <div class="project-card-footer">
-              <a
-                href="https://huggingface.co/spaces/moise97/sql-murder-mystery"
-                class="btn btn-primary project-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View SQL Murder Mystery live"
-                >View Live</a
-              >
-              <a
-                href="https://github.com/moise97"
-                class="btn btn-secondary project-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View SQL Murder Mystery on GitHub"
-                >GitHub</a
-              >
+              <a href="https://huggingface.co/spaces/moise97/sql-murder-mystery" class="btn btn-primary project-btn" target="_blank" rel="noopener noreferrer" aria-label="View SQL Murder Mystery live">View Live</a>
+              <a href="https://github.com/moise97" class="btn btn-secondary project-btn" target="_blank" rel="noopener noreferrer" aria-label="View SQL Murder Mystery on GitHub">GitHub</a>
             </div>
           </article>
 
           <!-- 4. IoT Anomaly Detection Dashboard -->
-          <article
-            class="project-card"
-            data-categories="cybersecurity ai data"
-            aria-labelledby="project-iot-title"
-          >
+          <article class="project-card" data-categories="cybersecurity ai data" aria-labelledby="project-iot-title">
             <div class="project-card-header">
               <div class="project-tags">
                 <span class="tag">IoT</span>
@@ -287,106 +180,64 @@
               </div>
               <span class="project-status project-status--live">Live</span>
             </div>
-            <h3 id="project-iot-title" class="project-title">
-              IoT Anomaly Detection Dashboard
-            </h3>
+            <h3 id="project-iot-title" class="project-title">IoT Anomaly Detection Dashboard</h3>
             <p class="project-desc">
               Real-time anomaly detection for MQTT IoT sensor data streams using
               Isolation Forest. A Streamlit + Plotly dashboard that flags
-              anomalous sensor readings the moment they spike — built during my
-              Hydroficient cybersecurity externship.
+              anomalous sensor readings the moment they spike — built during
+              my Hydroficient cybersecurity externship.
             </p>
-            <ul
-              class="project-highlights"
-              role="list"
-              aria-label="IoT Anomaly Detection highlights"
-            >
+            <ul class="project-highlights" role="list" aria-label="IoT Anomaly Detection highlights">
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>Isolation
-                Forest ML model trained on MQTT sensor telemetry
+                <span class="feature-dot" aria-hidden="true"></span>Isolation Forest ML model trained on MQTT sensor telemetry
               </li>
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>Real-time
-                Plotly charts with red anomaly spike markers
+                <span class="feature-dot" aria-hidden="true"></span>Real-time Plotly charts with red anomaly spike markers
               </li>
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>Hits AI +
-                Cybersecurity + Data Analytics simultaneously
+                <span class="feature-dot" aria-hidden="true"></span>Hits AI + Cybersecurity + Data Analytics simultaneously
               </li>
             </ul>
             <div class="project-card-footer">
-              <a
-                href="https://github.com/moise97/Hydroficient-IOT-Cyber-Defense"
-                class="btn btn-primary project-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View IoT Anomaly Detection on GitHub"
-                >GitHub</a
-              >
+              <a href="https://github.com/moise97/Hydroficient-IOT-Cyber-Defense" class="btn btn-primary project-btn" target="_blank" rel="noopener noreferrer" aria-label="View IoT Anomaly Detection on GitHub">GitHub</a>
             </div>
           </article>
 
           <!-- 5. Hydroficient IoT Defense Framework -->
-          <article
-            class="project-card"
-            data-categories="cybersecurity"
-            aria-labelledby="project-3-title"
-          >
+          <article class="project-card" data-categories="cybersecurity" aria-labelledby="project-3-title">
             <div class="project-card-header">
               <div class="project-tags">
                 <span class="tag">IoT</span>
                 <span class="tag">MQTT</span>
                 <span class="tag">Cybersecurity</span>
               </div>
-              <span class="project-status project-status--progress"
-                >In Progress</span
-              >
+              <span class="project-status project-status--progress">In Progress</span>
             </div>
-            <h3 id="project-3-title" class="project-title">
-              Hydroficient IoT Defense
-            </h3>
+            <h3 id="project-3-title" class="project-title">Hydroficient IoT Defense</h3>
             <p class="project-desc">
               A full IoT cybersecurity framework for the Grand Marina smart
               water management system. Includes STRIDE threat modeling, CIA
               Triad analysis, MQTT topic hierarchy design, and attacker
               narrative documentation.
             </p>
-            <ul
-              class="project-highlights"
-              role="list"
-              aria-label="Hydroficient project highlights"
-            >
+            <ul class="project-highlights" role="list" aria-label="Hydroficient project highlights">
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>STRIDE
-                threat model for HYDROLOGIC water system
+                <span class="feature-dot" aria-hidden="true"></span>STRIDE threat model for HYDROLOGIC water system
               </li>
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>Secure MQTT
-                topic hierarchy for hotel IoT network
+                <span class="feature-dot" aria-hidden="true"></span>Secure MQTT topic hierarchy for hotel IoT network
               </li>
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>Full
-                professional threat model document
+                <span class="feature-dot" aria-hidden="true"></span>Full professional threat model document
               </li>
             </ul>
             <div class="project-card-footer">
-              <a
-                href="https://github.com/moise97/Hydroficient-IOT-Cyber-Defense"
-                class="btn btn-primary project-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View Hydroficient IoT Defense on GitHub"
-                >GitHub</a
-              >
+              <a href="https://github.com/moise97/Hydroficient-IOT-Cyber-Defense" class="btn btn-primary project-btn" target="_blank" rel="noopener noreferrer" aria-label="View Hydroficient IoT Defense on GitHub">GitHub</a>
             </div>
           </article>
 
           <!-- 6. AI Calisthenics Coach -->
-          <article
-            class="project-card"
-            data-categories="ai"
-            aria-labelledby="project-5-title"
-          >
+          <article class="project-card" data-categories="ai" aria-labelledby="project-5-title">
             <div class="project-card-header">
               <div class="project-tags">
                 <span class="tag">Python</span>
@@ -395,67 +246,39 @@
               </div>
               <span class="project-status project-status--live">Live</span>
             </div>
-            <h3 id="project-5-title" class="project-title">
-              AI Calisthenics Coach
-            </h3>
+            <h3 id="project-5-title" class="project-title">AI Calisthenics Coach</h3>
             <p class="project-desc">
-              A personalized bodyweight training app powered by Google Gemini
-              AI. Users input their fitness level, goals, and equipment — the AI
-              generates a complete weekly workout plan with exercise tutorials
-              and PDF export. Built by combining 2+ years of real coaching
-              experience with AI.
+              A personalized bodyweight training app powered by Google Gemini AI.
+              Users input their fitness level, goals, and equipment — the AI
+              generates a complete weekly workout plan with exercise tutorials and
+              PDF export. Built by combining 2+ years of real coaching experience with AI.
             </p>
-            <ul
-              class="project-highlights"
-              role="list"
-              aria-label="AI Coach highlights"
-            >
+            <ul class="project-highlights" role="list" aria-label="AI Coach highlights">
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>AI-generated
-                personalized weekly workout plans
+                <span class="feature-dot" aria-hidden="true"></span>AI-generated personalized weekly workout plans
               </li>
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>Exercise
-                visual guide with YouTube tutorial links
+                <span class="feature-dot" aria-hidden="true"></span>Exercise visual guide with YouTube tutorial links
               </li>
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>Stats
-                dashboard, tabbed output, and PDF export
+                <span class="feature-dot" aria-hidden="true"></span>Stats dashboard, tabbed output, and PDF export
               </li>
             </ul>
             <div class="project-card-footer">
-              <a
-                href="https://huggingface.co/spaces/moise97/ai-calisthenics-coach"
-                class="btn btn-primary project-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                >View Live</a
-              >
-              <a
-                href="https://github.com/moise97"
-                class="btn btn-secondary project-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                >GitHub</a
-              >
+              <a href="https://huggingface.co/spaces/moise97/ai-calisthenics-coach" class="btn btn-primary project-btn" target="_blank" rel="noopener noreferrer">View Live</a>
+              <a href="https://github.com/moise97" class="btn btn-secondary project-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
           </article>
 
           <!-- 7. DocChat Pro -->
-          <article
-            class="project-card"
-            data-categories="ai"
-            aria-labelledby="project-4-title"
-          >
+          <article class="project-card" data-categories="ai" aria-labelledby="project-4-title">
             <div class="project-card-header">
               <div class="project-tags">
                 <span class="tag">Python</span>
                 <span class="tag">LlamaIndex</span>
                 <span class="tag">Gemini</span>
               </div>
-              <span class="project-status project-status--progress"
-                >In Progress</span
-              >
+              <span class="project-status project-status--progress">In Progress</span>
             </div>
             <h3 id="project-4-title" class="project-title">DocChat Pro</h3>
             <p class="project-desc">
@@ -464,57 +287,34 @@
               exponential backoff for rate limiting and advanced retrieval
               configuration.
             </p>
-            <ul
-              class="project-highlights"
-              role="list"
-              aria-label="DocChat Pro project highlights"
-            >
+            <ul class="project-highlights" role="list" aria-label="DocChat Pro project highlights">
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>BGE
-                embeddings vs MiniLM vs E5 comparison testing
+                <span class="feature-dot" aria-hidden="true"></span>BGE embeddings vs MiniLM vs E5 comparison testing
               </li>
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>Gemini API
-                integration with rate limit handling
+                <span class="feature-dot" aria-hidden="true"></span>Gemini API integration with rate limit handling
               </li>
               <li class="feature-item">
-                <span class="feature-dot" aria-hidden="true"></span>Advanced
-                retrieval configuration and chunking strategies
+                <span class="feature-dot" aria-hidden="true"></span>Advanced retrieval configuration and chunking strategies
               </li>
             </ul>
             <div class="project-card-footer">
-              <a
-                href="https://github.com/moise97"
-                class="btn btn-secondary project-btn"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View DocChat Pro on GitHub"
-                >GitHub</a
-              >
+              <a href="https://github.com/moise97" class="btn btn-secondary project-btn" target="_blank" rel="noopener noreferrer" aria-label="View DocChat Pro on GitHub">GitHub</a>
             </div>
           </article>
-        </div>
-        <!-- end projects-grid -->
 
-        <div
-          id="no-results"
-          class="no-results"
-          style="display: none"
-          aria-live="polite"
-        >
+        </div><!-- end projects-grid -->
+
+        <div id="no-results" class="no-results" style="display:none;" aria-live="polite">
           <p>No projects in this category yet — check back soon.</p>
         </div>
+
       </section>
 
       <section class="cta-section" aria-labelledby="projects-cta-heading">
         <div class="cta-box">
-          <h2 id="projects-cta-heading" class="cta-title">
-            Interested in Working Together?
-          </h2>
-          <p class="cta-desc">
-            These projects are just the beginning. Let's build something for
-            you.
-          </p>
+          <h2 id="projects-cta-heading" class="cta-title">Interested in Working Together?</h2>
+          <p class="cta-desc">These projects are just the beginning. Let's build something for you.</p>
           <a href="contact.html" class="btn btn-primary">Get In Touch</a>
         </div>
       </section>
@@ -522,15 +322,8 @@
 
     <footer class="site-footer" role="contentinfo">
       <div class="footer-content">
-        <p class="footer-copy">
-          &copy; 2025 Moise Michaud &mdash; Built with intention.
-        </p>
-        <p class="footer-stack">
-          <em
-            >HTML · CSS · JavaScript · Built for humans and screen readers
-            alike.</em
-          >
-        </p>
+        <p class="footer-copy">&copy; 2025 Moise Michaud &mdash; Built with intention.</p>
+        <p class="footer-stack"><em>HTML · CSS · JavaScript · Built for humans and screen readers alike.</em></p>
       </div>
     </footer>
 
