@@ -23,7 +23,7 @@
         />
         <span class="brand-name">Moise</span>
       </div>
-      <ul class="nav-links" role="list">
+      <ul class="nav-links" id="nav-links" role="list">
         <li>
           <a href="index.html" class="nav-link active" aria-current="page"
             >Home</a
@@ -43,6 +43,14 @@
           >
         </li>
       </ul>
+      <button
+        class="nav-hamburger"
+        id="nav-hamburger"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
     </nav>
 
     <main id="main-content">
@@ -56,10 +64,11 @@
             <span class="title-accent">Built Different.</span>
           </h1>
           <p class="hero-subtitle">
-           I'm Moise — a CS student with roots in surgical technology, swim
-coaching, and culinary arts. Currently building RAG systems as an AI Extern at Pfizer and IoT security solutions as a Cybersecurity Extern at Hydroficient. I bring a
-"zero-error" mentality from high-stakes medical environments to
-every line of code I write.
+            I'm Moise — a CS student with roots in surgical technology, swim
+            coaching, and culinary arts. Currently building RAG systems as an AI
+            Extern at Pfizer and IoT security solutions as a Cybersecurity
+            Extern at Hydroficient. I bring a "zero-error" mentality from
+            high-stakes medical environments to every line of code I write.
           </p>
           <div class="hero-cta-group">
             <a href="projects.html" class="btn btn-primary">View My Work</a>
@@ -74,16 +83,22 @@ every line of code I write.
           </div>
         </div>
 
+        <!-- TERMINAL — replaces the static hero card -->
         <div class="hero-visual" aria-hidden="true">
-          <div class="hero-card">
-            <div class="card-tag">Currently Building</div>
-            <p class="card-project">DocChat — AI Document Intelligence</p>
-            <div class="card-stack">
-              <span class="tag">RAG</span>
-              <span class="tag">LlamaIndex</span>
-              <span class="tag">Gradio</span>
-              <span class="tag">HuggingFace</span>
-              <span class="tag">Gemini API</span>
+          <div class="terminal-card">
+            <div class="terminal-topbar">
+              <span class="terminal-dot terminal-dot--red"></span>
+              <span class="terminal-dot terminal-dot--yellow"></span>
+              <span class="terminal-dot terminal-dot--green"></span>
+              <span class="terminal-topbar-title">moise@portfolio ~</span>
+            </div>
+            <div class="terminal-body">
+              <div class="terminal-line">
+                <span class="terminal-prompt">$</span>
+                <span id="terminal-cmd" class="terminal-cmd"></span>
+                <span class="terminal-cursor" id="terminal-cursor">█</span>
+              </div>
+              <div id="terminal-output" class="terminal-output"></div>
             </div>
           </div>
         </div>
@@ -142,7 +157,7 @@ every line of code I write.
               <span class="stat-label">Active Externships</span>
             </div>
             <div class="stat-card">
-              <span class="stat-number">5+</span>
+              <span class="stat-number">6+</span>
               <span class="stat-label">AI Apps Deployed</span>
             </div>
             <div class="stat-card">
@@ -186,6 +201,18 @@ every line of code I write.
                 MQTT protocol security, STRIDE threat modeling, CIA Triad
                 analysis, and network architecture for smart building systems.
                 Active externship at Hydroficient.
+              </p>
+            </div>
+          </li>
+          <li class="skill-item">
+            <div class="skill-icon" aria-hidden="true">📊</div>
+            <div class="skill-content">
+              <h3 class="skill-title">Data Analytics & Visualization</h3>
+              <p class="skill-desc">
+                SQL (MySQL, PostgreSQL, SQLite), Plotly, Streamlit dashboards,
+                Isolation Forest anomaly detection, and sales analytics with
+                interactive visualizations. Built and deployed production
+                dashboards on HuggingFace Spaces.
               </p>
             </div>
           </li>
@@ -275,6 +302,30 @@ every line of code I write.
         </nav>
       </section>
     </main>
+
+    <!-- GITHUB STRIP -->
+    <section class="github-strip" aria-labelledby="github-heading">
+      <div class="github-strip-inner">
+        <div class="github-strip-text">
+          <h3>Always building.</h3>
+          <p>Check the commit history — the work speaks for itself.</p>
+          <a
+            href="https://github.com/moise97"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+            style="margin-top: 1rem; display: inline-flex"
+            >GitHub Profile ↗</a
+          >
+        </div>
+        <img
+          src="https://github-readme-stats.vercel.app/api?username=moise97&show_icons=true&theme=dark&hide_border=true&bg_color=0d1b2a&title_color=00c2cb&icon_color=00c2cb&text_color=f0f4f8"
+          alt="Moise's GitHub contribution stats"
+          class="github-stats-img"
+          loading="lazy"
+        />
+      </div>
+    </section>
 
     <footer class="site-footer" role="contentinfo">
       <div class="footer-content">

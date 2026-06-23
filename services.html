@@ -12,7 +12,6 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
     <nav class="navbar" role="navigation" aria-label="Main navigation">
       <div class="nav-brand">
@@ -23,8 +22,7 @@
         />
         <span class="brand-name">Moise</span>
       </div>
-      <
-      <ul class="nav-links" role="list">
+      <ul class="nav-links" id="nav-links" role="list">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="about.html" class="nav-link">About</a></li>
         <li>
@@ -44,6 +42,14 @@
           >
         </li>
       </ul>
+      <button
+        class="nav-hamburger"
+        id="nav-hamburger"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
     </nav>
 
     <main id="main-content">
@@ -68,7 +74,6 @@
             Each service is backed by hands-on professional experience
           </p>
         </div>
-
         <div class="services-grid">
           <article class="service-card" aria-labelledby="service-1-title">
             <header class="service-card-header">
@@ -206,7 +211,7 @@
             <div class="service-card-footer">
               <span class="service-exp-label">Live projects:</span>
               <span class="service-exp-value"
-                >DocChat · SQL Murder Mystery</span
+                >DocChat · SQL Murder Mystery · Sales Dashboard</span
               >
             </div>
           </article>
@@ -390,8 +395,8 @@
               aria-expanded="false"
               aria-controls="faq-answer-1"
             >
-              <span>What services do you offer?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
+              <span>What services do you offer?</span
+              ><span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" id="faq-answer-1" role="region">
               <p>
@@ -409,8 +414,8 @@
               aria-expanded="false"
               aria-controls="faq-answer-2"
             >
-              <span>How do I get started working with you?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
+              <span>How do I get started working with you?</span
+              ><span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" id="faq-answer-2" role="region">
               <p>
@@ -430,8 +435,7 @@
               <span
                 >What makes your background different from other
                 developers?</span
-              >
-              <span class="faq-icon" aria-hidden="true">+</span>
+              ><span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" id="faq-answer-3" role="region">
               <p>
@@ -450,8 +454,8 @@
               aria-expanded="false"
               aria-controls="faq-answer-4"
             >
-              <span>Are you available for remote work?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
+              <span>Are you available for remote work?</span
+              ><span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" id="faq-answer-4" role="region">
               <p>
@@ -468,16 +472,16 @@
               aria-expanded="false"
               aria-controls="faq-answer-5"
             >
-              <span>What technologies do you work with?</span>
-              <span class="faq-icon" aria-hidden="true">+</span>
+              <span>What technologies do you work with?</span
+              ><span class="faq-icon" aria-hidden="true">+</span>
             </button>
             <div class="faq-answer" id="faq-answer-5" role="region">
               <p>
                 Python, Java, JavaScript, SQL, HTML/CSS, Spring Boot, React,
-                Docker, MQTT, LlamaIndex, HuggingFace, Gradio, Microsoft Azure,
-                and AWS. I'm currently pursuing Azure (SC-900, AZ-900, AI-900)
-                and AWS (Cloud Practitioner, SAA-C03) certifications alongside
-                CompTIA Security+.
+                Docker, MQTT, LlamaIndex, HuggingFace, Gradio, Streamlit,
+                Microsoft Azure, and AWS. Currently pursuing Azure (SC-900,
+                AZ-900, AI-900) and AWS (Cloud Practitioner, SAA-C03)
+                certifications alongside CompTIA Security+.
               </p>
             </div>
           </div>

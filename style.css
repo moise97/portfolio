@@ -2287,3 +2287,310 @@ strong {
     text-align: center;
   }
 }
+
+/* ============================================================
+   ADDITIONS — Append to bottom of style.css
+   v2: fixes hero spacing, CTA buttons, adds GitHub strip,
+       mobile hamburger nav
+   ============================================================ */
+
+/* ---- TERMINAL CARD ---- */
+.terminal-card {
+  background-color: #0a0f18;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 420px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.85rem;
+  box-shadow:
+    0 0 0 1px rgba(0, 194, 203, 0.08),
+    0 20px 60px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.terminal-topbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background-color: #111820;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.terminal-dot--red {
+  background: #ff5f57;
+}
+.terminal-dot--yellow {
+  background: #febc2e;
+}
+.terminal-dot--green {
+  background: #28c840;
+}
+
+.terminal-topbar-title {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-left: 8px;
+  letter-spacing: 0.04em;
+}
+
+.terminal-body {
+  padding: 18px 20px 22px;
+  min-height: 120px;
+}
+
+.terminal-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.terminal-prompt {
+  color: var(--color-accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.terminal-cmd {
+  color: #e8e8e8;
+  word-break: break-all;
+}
+
+.terminal-cursor {
+  color: var(--color-accent);
+  animation: blink 1s step-end infinite;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.terminal-output {
+  padding-left: 18px;
+  font-size: 0.8rem;
+  line-height: 1.9;
+  color: var(--color-text-muted);
+}
+
+.terminal-output .t-success {
+  color: #22c55e;
+}
+.terminal-output .t-info {
+  color: var(--color-accent);
+}
+.terminal-output .t-warn {
+  color: var(--color-amber);
+}
+
+/* ---- FIX: HERO SPACING & CTA BUTTONS ---- */
+.hero {
+  min-height: auto;
+  padding-bottom: var(--space-xl);
+}
+
+/* Keep all 3 CTA buttons on one row */
+.hero-cta-group {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.hero-cta-group .btn {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ---- FILTER BAR ---- */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.45rem 1.1rem;
+  border-radius: 100px;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.filter-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.filter-btn--active {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.project-card--hidden {
+  display: none;
+}
+.project-card--featured {
+  border-top: 2px solid var(--color-accent);
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  grid-column: 1 / -1;
+}
+
+/* ---- GITHUB STRIP ---- */
+.github-strip {
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-xl) var(--space-lg);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.github-strip-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.github-strip-text h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+.github-strip-text p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.github-stats-img {
+  border-radius: var(--radius-md);
+  max-width: 480px;
+  width: 100%;
+  border: 1px solid var(--color-border);
+}
+
+/* ---- MOBILE NAV ---- */
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all var(--transition);
+  line-height: 1;
+}
+
+.nav-hamburger:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 900px) {
+  .github-strip-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .github-stats-img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  /* Show hamburger, hide nav links by default */
+  .nav-hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background-color: rgba(13, 27, 42, 0.98);
+    border-bottom: 1px solid var(--color-border);
+    flex-direction: column;
+    padding: var(--space-md) var(--space-lg);
+    gap: var(--space-xs);
+    z-index: 99;
+    backdrop-filter: blur(12px);
+  }
+
+  .nav-links.nav-open {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links .nav-link {
+    display: block;
+    padding: 10px 0;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .nav-links .btn-resume {
+    margin-top: var(--space-xs);
+    display: inline-block;
+  }
+
+  /* Stack CTA buttons on very small screens */
+  .hero-cta-group {
+    flex-wrap: wrap;
+  }
+
+  .hero-cta-group .btn {
+    flex: 1 1 auto;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .filter-bar {
+    gap: 6px;
+  }
+  .filter-btn {
+    font-size: 0.72rem;
+    padding: 0.4rem 0.9rem;
+  }
+  .terminal-card {
+    max-width: 100%;
+  }
+}

@@ -12,7 +12,6 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
     <nav class="navbar" role="navigation" aria-label="Main navigation">
       <div class="nav-brand">
@@ -23,7 +22,7 @@
         />
         <span class="brand-name">Moise</span>
       </div>
-      <ul class="nav-links" role="list">
+      <ul class="nav-links" id="nav-links" role="list">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li>
           <a href="about.html" class="nav-link active" aria-current="page"
@@ -43,10 +42,17 @@
           >
         </li>
       </ul>
+      <button
+        class="nav-hamburger"
+        id="nav-hamburger"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
     </nav>
 
     <main id="main-content">
-      <!-- HERO -->
       <section
         class="page-hero about-hero"
         aria-labelledby="about-hero-heading"
@@ -65,11 +71,8 @@
         </div>
       </section>
 
-      <!-- STORY SECTION -->
       <section class="story-section" aria-labelledby="story-heading">
-        <!-- TIMELINE -->
         <div class="timeline" role="list">
-          <!-- Chapter 1 -->
           <div
             class="timeline-item"
             role="listitem"
@@ -103,7 +106,6 @@
             </div>
           </div>
 
-          <!-- Chapter 2 -->
           <div
             class="timeline-item"
             role="listitem"
@@ -145,7 +147,6 @@
             </div>
           </div>
 
-          <!-- Chapter 3 -->
           <div
             class="timeline-item"
             role="listitem"
@@ -192,7 +193,6 @@
             </div>
           </div>
 
-          <!-- Chapter 4 -->
           <div
             class="timeline-item"
             role="listitem"
@@ -221,9 +221,6 @@
                   measurable progressions is rarer and more valuable than the
                   skill itself.</strong
                 >
-                I could swim. But I had to learn how to teach swimming — how to
-                meet someone where they are, build their confidence, and create
-                a structured path to mastery.
               </p>
               <p>
                 I now apply that same framework to technical mentorship,
@@ -242,7 +239,6 @@
             </div>
           </div>
 
-          <!-- Chapter 5 -->
           <div
             class="timeline-item"
             role="listitem"
@@ -267,14 +263,7 @@
                 problem: the technology supporting healthcare was lagging behind
                 what was possible. Document processing was manual. Data was
                 siloed. Workflows that could be automated weren't. And I kept
-                thinking — I could fix this. Not as a doctor. Not as a
-                technician. As a developer who actually understands what happens
-                inside those walls.
-              </p>
-              <p>
-                I wanted to keep helping people. CS was the most powerful tool I
-                could pick up to do that at scale. One surgical case helps one
-                patient. One well-built AI system can help thousands.
+                thinking — I could fix this.
               </p>
               <p>
                 So I enrolled at Western Governors University for my BS in
@@ -291,7 +280,6 @@
             </div>
           </div>
 
-          <!-- Chapter 6 -->
           <div
             class="timeline-item"
             role="listitem"
@@ -313,9 +301,7 @@
               <p>
                 In five years, I want to have contributed to projects that
                 measurably improved people's lives — in healthcare, education,
-                or infrastructure. I want to have built a team, or a product, or
-                a company that carries forward the same principle I've lived by
-                since 2010:
+                or infrastructure.
               </p>
               <blockquote class="story-quote">
                 "Every opportunity is a responsibility. Build something worth
@@ -331,16 +317,13 @@
                 href="contact.html"
                 class="btn btn-primary"
                 style="margin-top: 1rem; display: inline-flex"
+                >Let's Talk →</a
               >
-                Let's Talk →
-              </a>
             </div>
           </div>
         </div>
-        <!-- End timeline -->
       </section>
 
-      <!-- SKILLS SECTION -->
       <section
         class="skills-visual-section"
         aria-labelledby="skills-visual-heading"
@@ -353,15 +336,13 @@
             Proficiency levels based on real project experience
           </p>
         </div>
-
         <div class="skills-grid">
           <div class="skill-category">
             <h3 class="skill-category-title">AI & Machine Learning</h3>
             <div class="skill-bars">
               <div class="skill-bar-item">
                 <div class="skill-bar-label">
-                  <span>Python</span>
-                  <span class="skill-bar-pct">90%</span>
+                  <span>Python</span><span class="skill-bar-pct">90%</span>
                 </div>
                 <div
                   class="skill-bar-track"
@@ -369,15 +350,15 @@
                   aria-valuenow="90"
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  aria-label="Python proficiency 90%"
+                  aria-label="Python 90%"
                 >
                   <div class="skill-bar-fill" style="width: 90%"></div>
                 </div>
               </div>
               <div class="skill-bar-item">
                 <div class="skill-bar-label">
-                  <span>RAG Systems / LlamaIndex</span>
-                  <span class="skill-bar-pct">85%</span>
+                  <span>RAG Systems / LlamaIndex</span
+                  ><span class="skill-bar-pct">85%</span>
                 </div>
                 <div
                   class="skill-bar-track"
@@ -385,15 +366,15 @@
                   aria-valuenow="85"
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  aria-label="RAG Systems proficiency 85%"
+                  aria-label="RAG 85%"
                 >
                   <div class="skill-bar-fill" style="width: 85%"></div>
                 </div>
               </div>
               <div class="skill-bar-item">
                 <div class="skill-bar-label">
-                  <span>Pandas / NLP</span>
-                  <span class="skill-bar-pct">80%</span>
+                  <span>Pandas / NLP</span
+                  ><span class="skill-bar-pct">80%</span>
                 </div>
                 <div
                   class="skill-bar-track"
@@ -401,15 +382,15 @@
                   aria-valuenow="80"
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  aria-label="Pandas NLP proficiency 80%"
+                  aria-label="Pandas 80%"
                 >
                   <div class="skill-bar-fill" style="width: 80%"></div>
                 </div>
               </div>
               <div class="skill-bar-item">
                 <div class="skill-bar-label">
-                  <span>LLM Prompt Engineering</span>
-                  <span class="skill-bar-pct">85%</span>
+                  <span>LLM Prompt Engineering</span
+                  ><span class="skill-bar-pct">85%</span>
                 </div>
                 <div
                   class="skill-bar-track"
@@ -417,21 +398,20 @@
                   aria-valuenow="85"
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  aria-label="LLM Prompt Engineering proficiency 85%"
+                  aria-label="Prompt Eng 85%"
                 >
                   <div class="skill-bar-fill" style="width: 85%"></div>
                 </div>
               </div>
             </div>
           </div>
-
           <div class="skill-category">
             <h3 class="skill-category-title">Development</h3>
             <div class="skill-bars">
               <div class="skill-bar-item">
                 <div class="skill-bar-label">
-                  <span>JavaScript / React</span>
-                  <span class="skill-bar-pct">80%</span>
+                  <span>JavaScript / React</span
+                  ><span class="skill-bar-pct">80%</span>
                 </div>
                 <div
                   class="skill-bar-track"
@@ -439,15 +419,15 @@
                   aria-valuenow="80"
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  aria-label="JavaScript React proficiency 80%"
+                  aria-label="JS 80%"
                 >
                   <div class="skill-bar-fill" style="width: 80%"></div>
                 </div>
               </div>
               <div class="skill-bar-item">
                 <div class="skill-bar-label">
-                  <span>Java / Spring Boot</span>
-                  <span class="skill-bar-pct">75%</span>
+                  <span>Java / Spring Boot</span
+                  ><span class="skill-bar-pct">75%</span>
                 </div>
                 <div
                   class="skill-bar-track"
@@ -455,15 +435,15 @@
                   aria-valuenow="75"
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  aria-label="Java Spring Boot proficiency 75%"
+                  aria-label="Java 75%"
                 >
                   <div class="skill-bar-fill" style="width: 75%"></div>
                 </div>
               </div>
               <div class="skill-bar-item">
                 <div class="skill-bar-label">
-                  <span>SQL / PostgreSQL</span>
-                  <span class="skill-bar-pct">85%</span>
+                  <span>SQL / PostgreSQL</span
+                  ><span class="skill-bar-pct">85%</span>
                 </div>
                 <div
                   class="skill-bar-track"
@@ -471,15 +451,15 @@
                   aria-valuenow="85"
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  aria-label="SQL PostgreSQL proficiency 85%"
+                  aria-label="SQL 85%"
                 >
                   <div class="skill-bar-fill" style="width: 85%"></div>
                 </div>
               </div>
               <div class="skill-bar-item">
                 <div class="skill-bar-label">
-                  <span>REST APIs / FastAPI</span>
-                  <span class="skill-bar-pct">80%</span>
+                  <span>REST APIs / FastAPI</span
+                  ><span class="skill-bar-pct">80%</span>
                 </div>
                 <div
                   class="skill-bar-track"
@@ -487,21 +467,20 @@
                   aria-valuenow="80"
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  aria-label="REST APIs FastAPI proficiency 80%"
+                  aria-label="API 80%"
                 >
                   <div class="skill-bar-fill" style="width: 80%"></div>
                 </div>
               </div>
             </div>
           </div>
-
           <div class="skill-category">
             <h3 class="skill-category-title">Cloud & Security</h3>
             <div class="skill-bars">
               <div class="skill-bar-item">
                 <div class="skill-bar-label">
-                  <span>AWS (EC2, S3)</span>
-                  <span class="skill-bar-pct">70%</span>
+                  <span>AWS (EC2, S3)</span
+                  ><span class="skill-bar-pct">70%</span>
                 </div>
                 <div
                   class="skill-bar-track"
@@ -509,15 +488,15 @@
                   aria-valuenow="70"
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  aria-label="AWS proficiency 70%"
+                  aria-label="AWS 70%"
                 >
                   <div class="skill-bar-fill" style="width: 70%"></div>
                 </div>
               </div>
               <div class="skill-bar-item">
                 <div class="skill-bar-label">
-                  <span>IoT / MQTT Security</span>
-                  <span class="skill-bar-pct">80%</span>
+                  <span>IoT / MQTT Security</span
+                  ><span class="skill-bar-pct">80%</span>
                 </div>
                 <div
                   class="skill-bar-track"
@@ -525,15 +504,15 @@
                   aria-valuenow="80"
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  aria-label="IoT MQTT Security proficiency 80%"
+                  aria-label="IoT 80%"
                 >
                   <div class="skill-bar-fill" style="width: 80%"></div>
                 </div>
               </div>
               <div class="skill-bar-item">
                 <div class="skill-bar-label">
-                  <span>Docker / CI/CD</span>
-                  <span class="skill-bar-pct">70%</span>
+                  <span>Docker / CI/CD</span
+                  ><span class="skill-bar-pct">70%</span>
                 </div>
                 <div
                   class="skill-bar-track"
@@ -541,15 +520,15 @@
                   aria-valuenow="70"
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  aria-label="Docker CI/CD proficiency 70%"
+                  aria-label="Docker 70%"
                 >
                   <div class="skill-bar-fill" style="width: 70%"></div>
                 </div>
               </div>
               <div class="skill-bar-item">
                 <div class="skill-bar-label">
-                  <span>Git / GitHub</span>
-                  <span class="skill-bar-pct">85%</span>
+                  <span>Git / GitHub</span
+                  ><span class="skill-bar-pct">85%</span>
                 </div>
                 <div
                   class="skill-bar-track"
@@ -557,21 +536,20 @@
                   aria-valuenow="85"
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  aria-label="Git GitHub proficiency 85%"
+                  aria-label="Git 85%"
                 >
                   <div class="skill-bar-fill" style="width: 85%"></div>
                 </div>
               </div>
             </div>
           </div>
-
           <div class="skill-category">
             <h3 class="skill-category-title">Soft Skills & Domain Knowledge</h3>
             <div class="skill-bars">
               <div class="skill-bar-item">
                 <div class="skill-bar-label">
-                  <span>Technical Documentation</span>
-                  <span class="skill-bar-pct">95%</span>
+                  <span>Technical Documentation</span
+                  ><span class="skill-bar-pct">95%</span>
                 </div>
                 <div
                   class="skill-bar-track"
@@ -579,15 +557,15 @@
                   aria-valuenow="95"
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  aria-label="Technical Documentation proficiency 95%"
+                  aria-label="Docs 95%"
                 >
                   <div class="skill-bar-fill" style="width: 95%"></div>
                 </div>
               </div>
               <div class="skill-bar-item">
                 <div class="skill-bar-label">
-                  <span>Cross-functional Communication</span>
-                  <span class="skill-bar-pct">95%</span>
+                  <span>Cross-functional Communication</span
+                  ><span class="skill-bar-pct">95%</span>
                 </div>
                 <div
                   class="skill-bar-track"
@@ -595,15 +573,15 @@
                   aria-valuenow="95"
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  aria-label="Cross-functional Communication proficiency 95%"
+                  aria-label="Comms 95%"
                 >
                   <div class="skill-bar-fill" style="width: 95%"></div>
                 </div>
               </div>
               <div class="skill-bar-item">
                 <div class="skill-bar-label">
-                  <span>Healthcare Domain Knowledge</span>
-                  <span class="skill-bar-pct">90%</span>
+                  <span>Healthcare Domain Knowledge</span
+                  ><span class="skill-bar-pct">90%</span>
                 </div>
                 <div
                   class="skill-bar-track"
@@ -611,15 +589,15 @@
                   aria-valuenow="90"
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  aria-label="Healthcare Domain Knowledge proficiency 90%"
+                  aria-label="Healthcare 90%"
                 >
                   <div class="skill-bar-fill" style="width: 90%"></div>
                 </div>
               </div>
               <div class="skill-bar-item">
                 <div class="skill-bar-label">
-                  <span>Agile / Scrum Methodologies</span>
-                  <span class="skill-bar-pct">80%</span>
+                  <span>Agile / Scrum Methodologies</span
+                  ><span class="skill-bar-pct">80%</span>
                 </div>
                 <div
                   class="skill-bar-track"
@@ -627,7 +605,7 @@
                   aria-valuenow="80"
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  aria-label="Agile Scrum proficiency 80%"
+                  aria-label="Agile 80%"
                 >
                   <div class="skill-bar-fill" style="width: 80%"></div>
                 </div>
@@ -637,7 +615,6 @@
         </div>
       </section>
 
-      <!-- CURRENTLY LEARNING -->
       <section class="learning-section" aria-labelledby="learning-heading">
         <div class="section-header">
           <h2 id="learning-heading" class="section-title">
@@ -647,7 +624,6 @@
             Certifications in progress — because learning never stops
           </p>
         </div>
-
         <div class="cert-grid">
           <div class="cert-card">
             <div class="cert-card-header">
@@ -662,8 +638,7 @@
             </p>
             <div class="cert-progress-wrap">
               <div class="cert-progress-label">
-                <span>Progress</span>
-                <span>65%</span>
+                <span>Progress</span><span>65%</span>
               </div>
               <div
                 class="cert-progress-track"
@@ -671,13 +646,12 @@
                 aria-valuenow="65"
                 aria-valuemin="0"
                 aria-valuemax="100"
-                aria-label="CompTIA Security+ progress 65%"
+                aria-label="Security+ 65%"
               >
                 <div class="cert-progress-fill" style="width: 65%"></div>
               </div>
             </div>
           </div>
-
           <div class="cert-card">
             <div class="cert-card-header">
               <div class="cert-icon" aria-hidden="true">☁️</div>
@@ -691,8 +665,7 @@
             </p>
             <div class="cert-progress-wrap">
               <div class="cert-progress-label">
-                <span>Progress</span>
-                <span>45%</span>
+                <span>Progress</span><span>45%</span>
               </div>
               <div
                 class="cert-progress-track"
@@ -700,13 +673,12 @@
                 aria-valuenow="45"
                 aria-valuemin="0"
                 aria-valuemax="100"
-                aria-label="AWS SAA-C03 progress 45%"
+                aria-label="AWS 45%"
               >
                 <div class="cert-progress-fill" style="width: 45%"></div>
               </div>
             </div>
           </div>
-
           <div class="cert-card">
             <div class="cert-card-header">
               <div class="cert-icon" aria-hidden="true">🔵</div>
@@ -720,8 +692,7 @@
             </p>
             <div class="cert-progress-wrap">
               <div class="cert-progress-label">
-                <span>Progress</span>
-                <span>55%</span>
+                <span>Progress</span><span>55%</span>
               </div>
               <div
                 class="cert-progress-track"
@@ -729,7 +700,7 @@
                 aria-valuenow="55"
                 aria-valuemin="0"
                 aria-valuemax="100"
-                aria-label="SC-900 progress 55%"
+                aria-label="SC-900 55%"
               >
                 <div class="cert-progress-fill" style="width: 55%"></div>
               </div>
@@ -738,7 +709,6 @@
         </div>
       </section>
 
-      <!-- LANGUAGES -->
       <section class="languages-section" aria-labelledby="languages-heading">
         <div class="section-header">
           <h2 id="languages-heading" class="section-title">Languages</h2>
@@ -746,19 +716,19 @@
         </div>
         <div class="languages-grid">
           <div class="language-card">
-            <span class="language-flag" aria-hidden="true">🇭🇹</span>
-            <span class="language-name">Haitian Creole</span>
-            <span class="language-level">Native</span>
+            <span class="language-flag" aria-hidden="true">🇭🇹</span
+            ><span class="language-name">Haitian Creole</span
+            ><span class="language-level">Native</span>
           </div>
           <div class="language-card">
-            <span class="language-flag" aria-hidden="true">🇫🇷</span>
-            <span class="language-name">French</span>
-            <span class="language-level">Advanced</span>
+            <span class="language-flag" aria-hidden="true">🇫🇷</span
+            ><span class="language-name">French</span
+            ><span class="language-level">Advanced</span>
           </div>
           <div class="language-card">
-            <span class="language-flag" aria-hidden="true">🇺🇸</span>
-            <span class="language-name">English</span>
-            <span class="language-level">Advanced</span>
+            <span class="language-flag" aria-hidden="true">🇺🇸</span
+            ><span class="language-name">English</span
+            ><span class="language-level">Advanced</span>
           </div>
         </div>
       </section>

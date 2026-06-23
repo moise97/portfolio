@@ -12,7 +12,6 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
     <nav class="navbar" role="navigation" aria-label="Main navigation">
       <div class="nav-brand">
@@ -23,7 +22,7 @@
         />
         <span class="brand-name">Moise</span>
       </div>
-      <ul class="nav-links" role="list">
+      <ul class="nav-links" id="nav-links" role="list">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="about.html" class="nav-link">About</a></li>
         <li><a href="services.html" class="nav-link">Services</a></li>
@@ -43,6 +42,14 @@
           >
         </li>
       </ul>
+      <button
+        class="nav-hamburger"
+        id="nav-hamburger"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
     </nav>
 
     <main id="main-content">
@@ -73,7 +80,6 @@
                 inquiry.
               </p>
             </div>
-
             <ul
               class="contact-details-list"
               role="list"
@@ -135,7 +141,6 @@
                 </div>
               </li>
             </ul>
-
             <div
               class="availability-card"
               role="status"
@@ -162,12 +167,13 @@
               novalidate
             >
               <h2 class="form-title">Send a Message</h2>
-
               <div class="form-group">
-                <label for="name" class="form-label">
-                  Full Name
-                  <span class="form-required" aria-label="required">*</span>
-                </label>
+                <label for="name" class="form-label"
+                  >Full Name
+                  <span class="form-required" aria-label="required"
+                    >*</span
+                  ></label
+                >
                 <input
                   type="text"
                   id="name"
@@ -182,12 +188,13 @@
                   >Enter your first and last name</span
                 >
               </div>
-
               <div class="form-group">
-                <label for="email" class="form-label">
-                  Email Address
-                  <span class="form-required" aria-label="required">*</span>
-                </label>
+                <label for="email" class="form-label"
+                  >Email Address
+                  <span class="form-required" aria-label="required"
+                    >*</span
+                  ></label
+                >
                 <input
                   type="email"
                   id="email"
@@ -202,12 +209,13 @@
                   >I'll reply to this address within 24 hours</span
                 >
               </div>
-
               <div class="form-group">
-                <label for="subject" class="form-label">
-                  What's This About?
-                  <span class="form-required" aria-label="required">*</span>
-                </label>
+                <label for="subject" class="form-label"
+                  >What's This About?
+                  <span class="form-required" aria-label="required"
+                    >*</span
+                  ></label
+                >
                 <select
                   id="subject"
                   name="subject"
@@ -233,12 +241,13 @@
                   >Helps me respond with the right context</span
                 >
               </div>
-
               <div class="form-group">
-                <label for="message" class="form-label">
-                  Your Message
-                  <span class="form-required" aria-label="required">*</span>
-                </label>
+                <label for="message" class="form-label"
+                  >Your Message
+                  <span class="form-required" aria-label="required"
+                    >*</span
+                  ></label
+                >
                 <textarea
                   id="message"
                   name="message"
@@ -254,7 +263,6 @@
                   help.</span
                 >
               </div>
-
               <div class="form-group form-group--checkbox">
                 <label class="checkbox-label" for="consent">
                   <input
@@ -271,14 +279,12 @@
                   >
                 </label>
               </div>
-
               <button
                 type="submit"
                 class="btn btn-primary btn-submit"
                 aria-describedby="submit-hint"
               >
-                Send Message
-                <span class="btn-arrow" aria-hidden="true">→</span>
+                Send Message <span class="btn-arrow" aria-hidden="true">→</span>
               </button>
               <span
                 id="submit-hint"
