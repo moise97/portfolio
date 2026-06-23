@@ -5,12 +5,12 @@
 
 /* ---- MOBILE NAV HAMBURGER ---- */
 const hamburger = document.getElementById("nav-hamburger");
-const navLinks = document.getElementById("nav-links");
+const navLinks  = document.getElementById("nav-links");
 
 if (hamburger && navLinks) {
   hamburger.addEventListener("click", () => {
     const isOpen = navLinks.classList.toggle("nav-open");
-    hamburger.textContent = isOpen ? "✕" : "☰";
+    hamburger.textContent     = isOpen ? "✕" : "☰";
     hamburger.setAttribute("aria-expanded", isOpen);
   });
 
@@ -23,6 +23,7 @@ if (hamburger && navLinks) {
     });
   });
 }
+
 
 /* ---- TERMINAL ANIMATION ---- */
 const terminalCommands = [
@@ -65,15 +66,15 @@ let charIdx = 0;
 let isDeleting = false;
 let outputVisible = false;
 
-const cmdEl = document.getElementById("terminal-cmd");
-const outputEl = document.getElementById("terminal-output");
-const cursorEl = document.getElementById("terminal-cursor");
+const cmdEl     = document.getElementById("terminal-cmd");
+const outputEl  = document.getElementById("terminal-output");
+const cursorEl  = document.getElementById("terminal-cursor");
 
 function runTerminal() {
   if (!cmdEl) return; // not on index page
 
   const current = terminalCommands[cmdIdx];
-  const full = current.cmd;
+  const full    = current.cmd;
 
   if (!isDeleting && !outputVisible) {
     // Type forward
@@ -91,16 +92,17 @@ function runTerminal() {
       return;
     }
     setTimeout(runTerminal, 60);
+
   } else if (isDeleting) {
     // Delete backward
     cmdEl.textContent = full.slice(0, charIdx);
     charIdx--;
 
     if (charIdx < 0) {
-      isDeleting = false;
+      isDeleting    = false;
       outputVisible = false;
-      charIdx = 0;
-      cmdIdx = (cmdIdx + 1) % terminalCommands.length;
+      charIdx       = 0;
+      cmdIdx        = (cmdIdx + 1) % terminalCommands.length;
       setTimeout(runTerminal, 500);
       return;
     }
@@ -111,17 +113,18 @@ function runTerminal() {
 function startDelete() {
   outputEl.innerHTML = "";
   isDeleting = true;
-  charIdx = terminalCommands[cmdIdx].cmd.length;
+  charIdx    = terminalCommands[cmdIdx].cmd.length;
   runTerminal();
 }
 
 // Kick off terminal after a short delay
 setTimeout(runTerminal, 900);
 
+
 /* ---- PROJECT FILTER ---- */
-const filterBtns = document.querySelectorAll(".filter-btn");
+const filterBtns   = document.querySelectorAll(".filter-btn");
 const projectCards = document.querySelectorAll("#projects-grid .project-card");
-const noResults = document.getElementById("no-results");
+const noResults    = document.getElementById("no-results");
 
 filterBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -130,7 +133,7 @@ filterBtns.forEach((btn) => {
     btn.classList.add("filter-btn--active");
 
     const filter = btn.dataset.filter;
-    let visible = 0;
+    let visible  = 0;
 
     projectCards.forEach((card) => {
       const cats = card.dataset.categories || "";
@@ -150,12 +153,13 @@ filterBtns.forEach((btn) => {
   });
 });
 
+
 /* ---- EXISTING SCRIPT FUNCTIONALITY (keep below) ---- */
 
 // FAQ accordion (services page)
 document.querySelectorAll(".faq-question").forEach((btn) => {
   btn.addEventListener("click", () => {
-    const item = btn.closest(".faq-item");
+    const item   = btn.closest(".faq-item");
     const answer = item.querySelector(".faq-answer");
     const isOpen = item.classList.contains("faq-open");
 
@@ -163,22 +167,22 @@ document.querySelectorAll(".faq-question").forEach((btn) => {
     document.querySelectorAll(".faq-item").forEach((el) => {
       el.classList.remove("faq-open");
       el.querySelector(".faq-answer").style.maxHeight = "0";
-      el.querySelector(".faq-answer").style.padding = "0 var(--space-lg)";
+      el.querySelector(".faq-answer").style.padding   = "0 var(--space-lg)";
     });
 
     // Open clicked (if it was closed)
     if (!isOpen) {
       item.classList.add("faq-open");
       answer.style.maxHeight = answer.scrollHeight + "px";
-      answer.style.padding = "0 var(--space-lg)";
+      answer.style.padding   = "0 var(--space-lg)";
     }
   });
 });
 
 // Profile photo modal
 const profilePhoto = document.querySelector(".profile-photo");
-const modal = document.querySelector(".photo-modal");
-const modalClose = document.querySelector(".photo-modal-close");
+const modal        = document.querySelector(".photo-modal");
+const modalClose   = document.querySelector(".photo-modal-close");
 
 if (profilePhoto && modal) {
   profilePhoto.addEventListener("click", () => {
@@ -235,9 +239,94 @@ if (contactForm) {
 
 // Reduced motion
 if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  document
-    .querySelectorAll(".terminal-cursor, .availability-dot")
-    .forEach((el) => {
-      el.style.animation = "none";
+  document.querySelectorAll(".terminal-cursor, .availability-dot").forEach((el) => {
+    el.style.animation = "none";
+  });
+}
+
+
+/* ---- PROJECT GALLERY (services page) ---- */
+const galleryProjects = [
+  {
+    img:   "images/portfolio_image1.webp",
+    tag:   "Data Analytics",
+    title: "Sales Analytics Dashboard",
+    desc:  "9,994 orders, 4 years of data, 5 KPIs — transformed into an interactive dashboard any stakeholder can use without writing a single SQL query.",
+    link:  "sales-dashboard.html",
+  },
+  {
+    img:   "images/protfolio_image 2.webp",
+    tag:   "AI / LLM",
+    title: "AI Calisthenics Coach",
+    desc:  "I couldn't get to the gym, so I built one that comes to me. Powered by Gemini AI and 2+ years of real coaching experience.",
+    link:  "calisthenics-coach.html",
+  },
+  {
+    img:   "images/protfolio_image 3.webp",
+    tag:   "AI / RAG",
+    title: "DocChat",
+    desc:  "A production RAG pipeline that lets users interrogate PDFs in natural language — with source citations on every answer. Built during my Pfizer externship.",
+    link:  "docchat.html",
+  },
+];
+
+const galleryImg     = document.getElementById("gallery-img");
+const galleryTag     = document.getElementById("gallery-tag");
+const galleryTitle   = document.getElementById("gallery-title");
+const galleryDesc    = document.getElementById("gallery-desc");
+const galleryDots    = document.getElementById("gallery-dots");
+const galleryCounter = document.getElementById("gallery-counter");
+const galleryLive    = document.getElementById("gallery-live");
+const galleryPrev    = document.getElementById("gallery-prev");
+const galleryNext    = document.getElementById("gallery-next");
+
+if (galleryImg && galleryProjects.length) {
+  let current = 0;
+
+  function buildDots() {
+    galleryDots.innerHTML = "";
+    galleryProjects.forEach((_, i) => {
+      const dot = document.createElement("button");
+      dot.className = "gallery-dot" + (i === 0 ? " active" : "");
+      dot.setAttribute("aria-label", `Go to project ${i + 1}`);
+      dot.addEventListener("click", () => showSlide(i));
+      galleryDots.appendChild(dot);
     });
+  }
+
+  function showSlide(idx) {
+    current = (idx + galleryProjects.length) % galleryProjects.length;
+    const p = galleryProjects[current];
+
+    galleryImg.src   = p.img;
+    galleryImg.alt   = p.title + " screenshot";
+    galleryTag.textContent   = p.tag;
+    galleryTitle.textContent = p.title;
+    galleryDesc.textContent  = p.desc;
+    galleryCounter.textContent = `${current + 1} / ${galleryProjects.length}`;
+    if (galleryLive) galleryLive.textContent = `Showing project ${current + 1} of ${galleryProjects.length}: ${p.title}`;
+
+    // Make title a link to case study
+    galleryTitle.innerHTML = `<a href="${p.link}" style="color:inherit;text-decoration:none;">${p.title} →</a>`;
+
+    // Update dots
+    document.querySelectorAll(".gallery-dot").forEach((dot, i) => {
+      dot.classList.toggle("active", i === current);
+    });
+  }
+
+  buildDots();
+  showSlide(0);
+
+  if (galleryPrev) galleryPrev.addEventListener("click", () => showSlide(current - 1));
+  if (galleryNext) galleryNext.addEventListener("click", () => showSlide(current + 1));
+
+  // Keyboard navigation
+  const galleryWrap = document.getElementById("project-gallery");
+  if (galleryWrap) {
+    galleryWrap.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft")  showSlide(current - 1);
+      if (e.key === "ArrowRight") showSlide(current + 1);
+    });
+  }
 }
